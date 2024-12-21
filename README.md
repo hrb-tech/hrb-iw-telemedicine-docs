@@ -10,9 +10,9 @@ A plataforma Google App Scripts tem 2 objetos javascript pré-configurados: Cale
 
 ## INstação e Atualização:  
 
-[Procedimento de instalação em Português Brasileiro](installing-iw-telemedicine-in-clients-lang-pt.md)
+[Procedimento de instalação - Português Brasileiro](installing-iw-telemedicine-in-clients-lang-pt.md)
 
-[Prodimento de atualização em Português Brasileiro](updating-iw-telemecine-in-clients-lang-pt.md)
+[Procedimento de atualização - Português Brasileiro](updating-iw-telemecine-in-clients-lang-pt.md)
   
 ## Algumas informações sobre o projeto
 

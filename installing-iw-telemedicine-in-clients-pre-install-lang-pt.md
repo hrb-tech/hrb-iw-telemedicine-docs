@@ -1,4 +1,4 @@
-# Procedimento de Pré-instalação do IW-TELEMEDICINE-API no Google Workspace do cliente.
+# Procedimento de Pré-instalação do IW-TELEMEDICINE-API no Google Workspace do cliente.  
 
 É pré-requisito para a instalação do IW-TELEMEDICINE-API no Google Workspace do cliente.  
 Só pode ser executado por um usuário com "status" de Administrador do Google Workspace do cliente.  
