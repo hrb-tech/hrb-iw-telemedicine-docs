@@ -1,0 +1,25 @@
+@startuml
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity "Iw Profile" as e00 {
+  description : name of an database instance of IwCare System
+}
+
+entity "Iw Doctor Agenda" as e01 {
+  description :  
+entity that aggregates all teleconsults events
+of a determined doctor
+}
+
+entity "iw-teleconsult" as e02 {
+  description : The iw-teleconsult-event itself
+}
+
+
+e00 |o..o{ e01
+e01 ||..o{ e02
+@enduml
