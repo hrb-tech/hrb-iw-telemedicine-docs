@@ -1,4 +1,4 @@
-# IW-Telemedicina-API project  
+# IW-Telemedicina-API Documentação  
 
 ## Introdução
 >Este projeto tem como objetivo integrar o Sistema de Saúde IwCare da Incoway Inc. e os recursos do Google Meeting no Google Workspaces por meio de sua API de Calendário.  
@@ -8,7 +8,7 @@ Esse tipo de abordagem abstrai toda a complexidade relacionada ao padrão WebRTC
   
 A plataforma Google App Scripts tem 2 objetos javascript pré-configurados: CalendarApp e Calendar. Usando esses 2 objetos, é possível executar processos complexos com poucas linhas de código. Esses 2 objetos têm alguma sobreposição de funcionalidades, onde é possível implementar um recurso com ambos. Dependendo do que se deseja fazer, deve-se optar pelo objeto onde a implementação seja mais simples. 
 
-## INstação e Atualização:  
+## Instação e Atualização:  
 
 [Procedimento de instalação - Português Brasileiro](installing-iw-telemedicine-in-clients-lang-pt.md)
 
@@ -58,7 +58,7 @@ Exemplo:
 Significado: Dia 14 de maio (mês) de 2022 (ano) às 22 horas e 59 minutos e 59 segundos, fuso horário -03:00 (fuso horário de São Paulo ou Brasília)
 
 
-### MOdelo lógico de dados
+### Modelo lógico de dados
 > Do ponto de vista do IwCare, foram utilizadas 3 entidades:  
 >![Diagrama de entidades](entityDiagram.png)
 >
