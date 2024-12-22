@@ -4,7 +4,7 @@
 >Este projeto tem como objetivo integrar o Sistema de Saúde IwCare da Incoway Inc. e os recursos do Google Meeting no Google Workspaces por meio de sua API de Calendário.  
 A integração foi implementada usando o Google App Script que tem uma grande afinidade com o Google-Calendar-API (que na verdade pertence ao Google-Meeting-Resource para videoconferências).  
 Esta integração oferecerá ao Sistema IwCare as consultas de telemedicina usando o excelente aplicativo de videoconferência do Google Meeting.  
-Esse tipo de abordagem abstrai toda a complexidade relacionada ao padrão WebRTC e sua infraestrutura de fundo ( signaling, stun and turn servers), sem falar no aplicativo GUI que deve ser escrito para orquestrar tudo isso e oferecer ao usuário final uma boa UX (experiência do usuário). Acrescentando o fato de que este APP deve ser executado em diferentes plataformas (ios, android, windows, macOS, linux,...) com diferentes tamanhos de tela. A lista de detalhes que devem ser levados em conta não para por aqui...  
+Esse tipo de abordagem abstrai toda a complexidade relacionada ao padrão WebRTC e sua infraestrutura de fundo (Ssignaling, Stun and Turn servers), sem falar no aplicativo GUI que deve ser escrito para orquestrar tudo isso e oferecer ao usuário final uma boa UX (experiência do usuário). Acrescentando o fato de que este APP deve ser executado em diferentes plataformas (ios, android, windows, macOS, linux,...) com diferentes tamanhos de tela. A lista de detalhes que devem ser levados em conta não para por aqui...  
   
 A plataforma Google App Scripts tem 2 objetos javascript pré-configurados: CalendarApp e Calendar. Usando esses 2 objetos, é possível executar processos complexos com poucas linhas de código. Esses 2 objetos têm alguma sobreposição de funcionalidades, onde é possível implementar um recurso com ambos. Dependendo do que se deseja fazer, deve-se optar pelo objeto onde a implementação seja mais simples. 
 
@@ -66,6 +66,7 @@ Significado: Dia 14 de maio (mês) de 2022 (ano) às 22 horas e 59 minutos e 59 
 >1. IW-PROFILE: tecnicamente é o nome da instância do banco de dados do Sistema IWCare. Do ponto de vista do Google workspace, é apenas um PREFIXO do nome de um calendário. Todos os nomes de calendário serão formados usando esta regra de formato: <IW-PROFILE>-Dr-<iwProfessionalId>. Exemplo: para um médico que tem iwProfessionalId = 1234  na instância do banco de dados IwIncoway, ele terá sua Agenda (calendário) com o nome: IwIncoway-Dr-1234  
 >2. IW-AGENDA: tecnicamente esta entidade não existe nativamente no Sistema IwCare. Criamos este conceito aqui mesmo. Tem uma correspondência de 1 para 1 com o objeto Calendário dentro do Google workspaces.  
 >3. IW-TELE-CONSULT: tecnicamente esta entidade é chamada simplesmente de Consulta. Tem uma tabela de banco de dados chamada Consulta e cada uma tem um ID (consultId) como chave primária. Do ponto de vista do google workspaces, IW-CONSULT tem correspondência de 1 para 1 com o evento de calendário com um link de hangout atribuído a ele  
+>4. Essa tabelas não existem em nenhum banco de dados (nem no modelo do IwCare nem no Google Workspaces explicitamente). São apenas conceitos criados aqui para facilitar o entendimento.
   
 ### Essência
 >A essência dessa integração é oferecer uma URL para uma determinada sala de reunião do Google Meeting. A única tarefa que o Sistema IwCare precisa fazer é colocar 2 usuários finais apontando para a mesma URL em um navegador.  
@@ -109,7 +110,7 @@ recreateProfessionalAgenda
   
 Para executar qualquer uma dessas ações, é necessário acessar a URL base padrão, passando no corpo da requisição POST, um objeto JSON com todos os parâmetros necessários a respectiva ação. Somente requisições HTTP POST são aceitas. Requisições GET não serão respondidas. como também nenhum outro método HTTP é aceito.  
 
-Cada ação tem atributos específicos dela. Seu próprio objecto JSON. E cada resposta tem também sua própria estrutura.
+Cada ação tem atributos específicos dela. Seu próprio objecto JSON. E cada resposta tem também sua própria estrutura.  
 
   
   
