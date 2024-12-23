@@ -6,10 +6,11 @@ Só pode ser executado por um usuário com "status" de Administrador do Google W
 *A não disponibilização de qualquer dos passos impede a instalação do IW-TELEMEDICINE-API.*
 
 1. Contratar Google Workspace do cliente:  
-Cliente deve contratar o Google Workspace. (ou seja, assinar o serviço do Google Workspace)
-É automaticamente definido aqui o *usuário Master* do Google Workspace do cliente.
-Esse usuário só deve ser usado para a *criação do Work Space* e outras tarefas críticas, como o cancelamento da assinatura por exemplo.  
-O master também tem acessos privilegiados a configurações de faturamento também.  
+Cliente deve contratar o Google Workspace. (ou seja, assinar o serviço do Google Workspace).
+O tipo de conta do Google Workspace mais simples atende o propósito do IW-TELEMEDICINE-API. (Conta tipo *Business Starter*)
+Assinado o plano mais básico, já é automaticamente definido o *usuário Master* do Google Workspace do cliente.
+Esse usuário só deve ser usado para a *criação do Work Space - assinatura* e outras tarefas críticas, como o cancelamento da assinatura por exemplo.  
+O usuário também tem uma serie de outros privilégios como acesso completo ao console de administração do Google workspaces e acesso a dados de faturamento.
 *Usuário Master jamais deve ser usado no dia a dia.*
 É o único usuário com poderes para cancelar a assinatura do Google Workspace.  
 
@@ -30,7 +31,7 @@ Sugerimos o nome infra@<customer-domain> apenas para manter nossas instalações
 É impressindível a criação desse usuário. Ele é *pivot* para todas as integrações com o sistema IW-Care.  
 **Sem a existencia desse usuário não é possível instalar a IW-Telemedicina-API.**  
 
-Esse usuário extra implica em custos adicionais para o cliente (aprox. 5 a 7 US$ por mês)    
+Esse usuário extra implica em custos adicionais para o cliente (aprox. $US 5 a $US 7 por mês para contas do tipo *Business Starter*)    
 Conferir junto ao Google os preços atualizados, mas não devem fugir muito desses valores.  
 É o único custo que o IW-Telemedicina-API acrescenta além da assinatura básica da plataforma Google Workspace.  
 

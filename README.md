@@ -67,7 +67,11 @@ Significado: Dia 14 de maio (mês) de 2022 (ano) às 22 horas e 59 minutos e 59 
 >2. IW-AGENDA: tecnicamente esta entidade não existe nativamente no Sistema IwCare. Criamos este conceito aqui mesmo. Tem uma correspondência de 1 para 1 com o objeto Calendário dentro do Google workspaces.  
 >3. IW-TELE-CONSULT: tecnicamente esta entidade é chamada simplesmente de Consulta. Tem uma tabela de banco de dados chamada Consulta e cada uma tem um ID (consultId) como chave primária. Do ponto de vista do google workspaces, IW-CONSULT tem correspondência de 1 para 1 com o evento de calendário com um link de hangout atribuído a ele  
 >4. Essa tabelas não existem em nenhum banco de dados (nem no modelo do IwCare nem no Google Workspaces explicitamente). São apenas conceitos criados aqui para facilitar o entendimento.
-  
+> Nâo existe limite teórico para o número de Agendas que podem existir na conta de um único Usuário do Google Workspaces.   
+Podendo ir de dezenas, centanas ou até mesmo milhares. Mas em termos práticos deve-se observar a responsividade da API de modo a contribuir para tempos de responta satisfatórios. Caso um dados cliente tenha milhares de profissionais que terão agendas de teleconsultas, deve-se considerar a possibilidade de criar mais do que 1 usuário para esses clientes e dividir a carga de agendas entre as duas contas. Sendo que do ponto de vista do Google Workspaces, para cada usuário ativo, é adicionado um custo de aproximadamente $US 5 a $US 7 por mês para contas do tipo *Business Starter.*  
+Mas para a maioria dos clientes da Iberwan, um único usuário do Google Workspaces é o suficiente.    
+
+
 ### Essência
 >A essência dessa integração é oferecer uma URL para uma determinada sala de reunião do Google Meeting. A única tarefa que o Sistema IwCare precisa fazer é colocar 2 usuários finais apontando para a mesma URL em um navegador.  
 Fazendo isso, eles farão uma videoconferência.  
@@ -88,7 +92,7 @@ https://script.google.com/macros/s/AKfycbyr7gqRjEUjHdlHJe6QDDhGS-Ui5TcnaK6lvki4Y
 Este projeto usa abordagem SERVERLESS. Isso significa que o Google fornece toda a infra-estrutura para processar e escalar todos os HTTP-POST-REQUESTS que chegam à URL base.  
 
 *IMPORTANTE:*  
-**Esta URL base sempre muda quando um novo projeto é implantado/atualizado.**
+**Esta URL base sempre muda quando um novo projeto é implantado. Ou seja quando é instalado/atualizado.**
 Prestar muita atenção nisso.  
   
 >Diferentes ações podem ser acessadas usando a mesma URL BASE, e passando os parâmetros corretos no corpo de cada requisição HTTP POST.
