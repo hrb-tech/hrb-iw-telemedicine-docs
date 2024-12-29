@@ -2,9 +2,10 @@
 
 1. Criar usuário adicional infra.<custopmer_name>@iwsoftware.com.br no Google Workspace do cliente:  
 Usar o acesso do usuário Master para criar o usuário infra.<customer_name>@iwsoftware.com.br no Google Workspace da Iberwan.  
-O usuário infra.<Custpmer_Name><>@iwsoftware.com.br é o usuário que será usado para instalar a IW-Telemedicina-API para o client específico.  
+O usuário infra.<Customer_Name><>@iwsoftware.com.br é o usuário que será usado para instalar a IW-Telemedicina-API para o client específico.
+(Substituir <Customer_Name> pelo nome da empresa cliente).    
 
-É impressindível a criação desse usuário. Ele é *pivot* para todas as integrações com o sistema IW-Care.  
+É impressindível a criação desse usuário. Ele é o *pivot* para todas as integrações IW-Telemedicine-API com o sistema IW-Care em um cliente.  
 **Sem a existência desse usuário não é possível instalar a IW-Telemedicina-API.** para um cliente.  
 
 Ao criar o usuário infra.<Customer_Name>@iwsoftware.com.br, deve-se definir uma senha para ele.  
@@ -12,43 +13,39 @@ A senha deve ser forte e segura.
 Esse usuário deve ter acesso a todos os recursos do Google Workspace da Iberwan.  
 (principalmente Gmail, Calendar, Drive, Meet, Sheets, Docs)
 
-3. Autorizar o usuário infra@<customer-domain> a receber requisições via *Google App Script API* dentro so seu Workspace:  
+2. **Autorizar o usuário infra.<Customer_Name>@iwsoftware.com.br a receber requisições via *Google App Script API* dentro so seu Workspace:**  
 Só o próprio usuário infra@<customer-domain> pode autorizar o acesso ao seu próprio Workspace via *API Google App Script*. 
 Todas as comunicações no momento de instalação do IW-Telemedicina-API são feitas via *API Google App Script*. (uma API interna do Google)  
 Todos os comandos *clasp* executados na segunda estapa da instalação são feitos via *API Google App Script*.
-A ausência dessa autorização impede a instalação da IW-Telemedicina-API.
-Para autorizar o usuário infra@<customer-domain> a receber requisições via Google App Script API, o usuário infra deve:  
-* acessar o link: https://script.google.com/home/usersettings 
-* e ligar a chave "Allow scripts to run on your domain".
-
-5. Assinar o BBA:  
-O cliente deve assinar o BBA (Basic Business Associate) do Google Workspace.
-O BBA é um termo de compromisso que o Google axige de todos os clientes para que os clientes possam usar o Google Workspace em seus negócios. Principalmente em conteúdos relacionados a saúde.  
-Em resumo, trata-se de um contrato que permite que o Google armazene dados pessoais de seus clientes, desde que esses dados sejam usados apenas para fins de negócios e em conformidade com as leis e regulamentos aplicáveis (HIPAA, GDPR, etc.).
-Todos os serviços do Google Workspace que o IW-TELEMEDINA-API usa são implementados em conformidade com a HIPAA e GDPR.
-O IW-Telemedicina-API não armazena nenhum dado pessoal sensível do Usuário, dos Pacientes ou de profissionais de saúde. Nem mesmo em trânsito esses dados são usados. Usa HTTPS para comunicação segura.  
-Esse termo de compromisso é a garania para o google de que as empresas usuárias do Google Workspaces não vão usar o Google Workspace para fins ilegais ou que agridam alguma diretriz da HIPAA ou GDPR.  
-
-**Como assinar o BBA?**  
-Na console de administração do Google Workspace, o cliente deve acessar a aba "Segurança" e clicar em "BBA".
-Use o usuário Master do Google Workspace do cliente para assinar o BBA.  
+A ausência dessa autorização impede a instalação da IW-Telemedicina-API na conta do usuário criado para o cliente dentro do Workspace da Iberwan.  
+Para autorizar o usuário infra.<Customer_Name>@iwsoftware.com.br a receber requisições via *Google App Script API*, o usuário infra deve:
+* Fazer login no *Google Workspace da Iberwan*  
+* Acessar o link: https://script.google.com/home/usersettings 
+* E ligar a chave "Allow scripts to run on your domain".
 
 
-6. Autorizar a máquina que será usada para instalar a IW-Telemedicina-API no Google Workspace do cliente:  
-É necessário que a máquina que será usada para instalar a IW-Telemedicina-API no Google Workspace do cliente tenha acesso a internet e acesso ao Google Workspace do cliente. Em ressumo qualquer máquina com acesso a internet e que tenha um Navegador Web pré-instalado (preferível Google Chrome). Recomendamos que seja uma maquina **Linux**, porque simplifica a instalação e manutenção. Maquinas com MacOS (Apple) também podem ser usadas com as mesmas facilidades, embora não testado. Máquinas Windows podem ser usadas, mas será necessário instalação de software adicional e configurações extras.  
-A etapa 2 de instalação do IW-Telemedicina-API fluirá de modo mais suave em máquinas linux. Para todas as demais etapas de instalação, o sistema operacional não importa. 
+3. **Autorizar a máquina que será usada para instalar a IW-Telemedicina-API no Google Workspace da Iberwan:  
+A máquina pessoal do profissional da Iberwan que vai instalar/atualizar a IW-Telemedicine-API precisa autorizar a sua máquina a acessar o repositório onde se encontram os fontes da IW-Telemedicine-API.  
+Essa autorização só precisa ser feita uma unica vez para um dado profissional. Deve ser repetida apenas nos casos onde o profissional trocar de máquina, ou quando o mesmo não for mais executar instalações/atualizações.
+(Ex: desligamento da Iberwan, mudança de atribuições, etc).  
+ 
+> É necessário que a máquina tenha um bom e estável acesso a internet e um Navegador moderno instalado (preferível Google Chrome).
+Recomendamos também que seja uma maquina **Linux**, porque simplifica a instalação e manutenção. Maquinas com MacOS (Apple) também podem ser usadas com as mesmas facilidades, embora não testado.
+> Máquinas Windows podem ser usadas, mas será necessário instalação de software adicional e configurações extras.  
+A etapa 2 de instalação do IW-Telemedicina-API fluirá de modo mais suave em máquinas linux. Para todas as demais etapas de instalação, o sistema operacional não importa.  
 
 >Obs Apenas para máquinas Windows, sabe-se:  
-* É necessário instalar o Google Chrome.
+* É necessário instalar o Google Chrome. O Navegdor nativo do windows costuma apresentar erros em alguns casos. Motivos desconhecidos.
 * Habilitar o WLS2 para Windows.  
 * Instalar o WSL2 e o Ubuntu 20.04 LTS.  
-
->Microsoft disponibiliza o uso do Linux ao mesmo tempo que o Windows.  
-Com o WLS2, o Windows passa a ser um sistema operacional com Linux embarcado.  
-O WSL2 permite a execução de aplicações Linux diretamente no Windows.  
-todos os comandos da etapa 2 de instalação do IW-Telemedicina-API podem ser executados em um terminal do WSL2.
+A Microsoft disponibiliza o uso do Linux ao mesmo tempo que o Windows.  
+Com o WLS2 (Windows Linux Subsystem), o Windows pode ter um sistema operacional Linux *embarcado*.
+ 
+>Todos os comandos da etapa 2 de instalação do IW-Telemedicina-API podem ser executados em um terminal do WLS2.
 Usar o WLS2 é a nossa recomendação para quem só pode usar uma maquina Windows.
-Existem outras formas de usar Linux dentro de máquinas windows, mas o WSL2 é a mais simples e tem a vantagem de ter um terminal do Linux dentro do Windows. O WLS2 é uma tecnogia que a Microsoft vem desenvolvendo a mais de uma década e hoje se encontra em sua versão 2 e com  boa maturidade. Está disponivel em maquinas Windows 10 e Windows 11.   
+Existem outras formas de usar Linux dentro de máquinas windows, mas o WLS2 é a mais simples e tem a vantagem de ter um terminal do Linux dentro do Windows.
+>O WLS2 é uma tecnogia que a Microsoft vem desenvolvendo a mais de uma década e hoje se encontra em sua versão 2 e com boa maturidade.
+>Está disponivel para todas as máquinas com Windows 10/11.   
 
 
 
