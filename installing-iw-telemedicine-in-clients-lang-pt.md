@@ -9,7 +9,7 @@ Precisa também assinar um termo de Sigilo e de não alteração do código em p
 Pois precisa ter acesso aos fontes.
 
 Os recursos do IW-Telemedicine-API em si e as funcionalidades do Google Work Spaces quando usados para fins Medicos  
-possuem uma série de implicações legais e de segurança que devem ser entendidas e cumpridas (HIPPA, LGPD).
+possuem uma série de implicações legais e de segurança que devem ser entendidas e cumpridas (ex: HIPPA, LGPD).
 
 1. Pre-Instalação: Prepara a instalação do *projeto IW-TELEMEDICINE-API* no Google Workspaces da Iberwan:  
    [Detalhes aqui](installing-iw-telemedicine-in-clients-pre-install-lang-pt.md)
