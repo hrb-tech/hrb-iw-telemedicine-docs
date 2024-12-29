@@ -1,4 +1,6 @@
-# Etapa 3 da Instalação IW-Telemedicina-API:
+# Etapa 3  
+## Instalação IW-Telemedicina-API
+  
 
 Executada usando o IDE do Google para App Scripts que funciona direto do Navegador (Google Chrome de preferência)  
 *Esses passos devem ser executados pelo cliente, com suporte de um consultor da Iberwan se o cliente assim o desejar.*
