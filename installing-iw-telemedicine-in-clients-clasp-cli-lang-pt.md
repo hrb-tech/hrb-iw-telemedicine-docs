@@ -1,4 +1,5 @@
-# Etapa 2 - Instalação IW-Telemedicine no Google Workspace do Cliente
+# Etapa 2  
+## Instalação IW-Telemedicine no Google Workspace da Iberwan
 
 >somente deve ser executada após o cumprimento de todos os passos da etapa1 (pré-instalação)  
 sugerimos usar WLS2 com Ubuntu 20.04 e o terminal do Linux para executar os comandos abaixo.
