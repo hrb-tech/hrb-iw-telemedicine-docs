@@ -9,11 +9,16 @@ E  lista de detalhes que devem ser considerado não para ...
   
 A plataforma Google App Scripts tem 2 objetos javascript pré-configurados: CalendarApp e Calendar. Usando esses 2 objetos, é possível executar processos complexos com poucas linhas de código. Esses 2 objetos têm alguma sobreposição de funcionalidades, onde é possível implementar um recurso com ambos. Dependendo do que se deseja fazer, deve-se optar pelo objeto onde a implementação seja mais simples. 
 
+**A unica atitude que o Cliente precisa ter é contratar o IW Telemedicine, bastando contactar o setor comercial da Iberwan**  
+
+>A direção da Iberwan dando o OK, ela acionará o suporte para executar os prodecimentos de instalação/atualização descritos abaixo.
+
 ## Instação e Atualização:  
 
 [Procedimento de instalação - Português Brasileiro](installing-iw-telemedicine-in-clients-lang-pt.md)
 
 [Procedimento de atualização - Português Brasileiro](updating-iw-telemecine-in-clients-lang-pt.md)
+
   
 ## Algumas informações sobre o projeto
 
@@ -22,7 +27,7 @@ A plataforma Google App Scripts tem 2 objetos javascript pré-configurados: Cale
 Como JSON não tem uma forma padrão de passar Datas, aqui vamos usar o formato que o Google definiu para esse objetivo.
 Sempre que passarmos / recebermos uma Data, usaremos strings - formato abaixo:
 
-Formato para datas:
+Formato para Datas:
 
 YYYY-MM-DDThh:mm:ss-hh:mm
 
