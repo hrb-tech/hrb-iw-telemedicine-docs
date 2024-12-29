@@ -115,7 +115,7 @@ recreateProfessionalAgenda
   
 Para executar qualquer uma dessas ações, é necessário acessar a URL base padrão, passando no corpo da requisição POST, um objeto JSON com todos os parâmetros necessários a respectiva ação. Somente requisições HTTP POST são aceitas. Requisições GET não serão respondidas. como também nenhum outro método HTTP é aceito.  
 
-Cada ação tem atributos específicos dela. Seu próprio objecto JSON. E cada resposta tem também sua própria estrutura.  
+Cada ação tem atributos específicos. Seu próprio objecto JSON (payload). E cada resposta tem também sua própria estrutura (repsonse payload).  
 
   
   
