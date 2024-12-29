@@ -2,7 +2,7 @@
 
 1. **Criar usuário adicional infra.<custopmer_name>@iwsoftware.com.br no Google Workspace do cliente:**  
 Usar o acesso do usuário Master para criar o usuário infra.<customer_name>@iwsoftware.com.br no Google Workspace da Iberwan.  
-O usuário infra.<Customer_Name><>@iwsoftware.com.br é o usuário que será usado para instalar a IW-Telemedicina-API para o client específico.
+O usuário infra.<Customer_Name><>@iwsoftware.com.br é o usuário que será usado para instalar a IW-Telemedicina-API para o cliente específico.
 (Substituir <Customer_Name> pelo nome da empresa cliente).    
 
 É impressindível a criação desse usuário. Ele é o *pivot* para todas as integrações IW-Telemedicine-API com o sistema IW-Care em um cliente.  
