@@ -1,6 +1,6 @@
 # Procedimento de Pré-instalação do IW-TELEMEDICINE-API - Google Workspace da Iberwan.  
 
-1. Criar usuário adicional infra.<custopmer_name>@iwsoftware.com.br no Google Workspace do cliente:  
+1. **Criar usuário adicional infra.<custopmer_name>@iwsoftware.com.br no Google Workspace do cliente:**  
 Usar o acesso do usuário Master para criar o usuário infra.<customer_name>@iwsoftware.com.br no Google Workspace da Iberwan.  
 O usuário infra.<Customer_Name><>@iwsoftware.com.br é o usuário que será usado para instalar a IW-Telemedicina-API para o client específico.
 (Substituir <Customer_Name> pelo nome da empresa cliente).    
@@ -24,7 +24,7 @@ Para autorizar o usuário infra.<Customer_Name>@iwsoftware.com.br a receber requ
 * E ligar a chave "Allow scripts to run on your domain".
 
 
-3. **Autorizar a máquina que será usada para instalar a IW-Telemedicina-API no Google Workspace da Iberwan:  
+3. **Autorizar a máquina que será usada para instalar a IW-Telemedicina-API no Google Workspace da Iberwan:**  
 A máquina pessoal do profissional da Iberwan que vai instalar/atualizar a IW-Telemedicine-API precisa autorizar a sua máquina a acessar o repositório onde se encontram os fontes da IW-Telemedicine-API.  
 Essa autorização só precisa ser feita uma unica vez para um dado profissional. Deve ser repetida apenas nos casos onde o profissional trocar de máquina, ou quando o mesmo não for mais executar instalações/atualizações.
 (Ex: desligamento da Iberwan, mudança de atribuições, etc).  
