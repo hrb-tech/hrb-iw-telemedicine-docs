@@ -1,26 +1,4 @@
-# Procedimento de Pré-instalação do IW-TELEMEDICINE-API no Google Workspace do cliente.  
-
-É pré-requisito para a instalação do IW-TELEMEDICINE-API no Google Workspace do cliente.  
-Só pode ser executado por um usuário com "status" de Administrador do Google Workspace do cliente.  
-*Todos os passos descritos aqui são de responsabilidade do cliente.*  
-*A não disponibilização de qualquer dos passos impede a instalação do IW-TELEMEDICINE-API.*
-
-1. Contratar Google Workspace do cliente:  
-Cliente deve contratar o Google Workspace. (ou seja, assinar o serviço do Google Workspace).
-O tipo de conta do Google Workspace mais simples atende o propósito do IW-TELEMEDICINE-API. (Conta tipo *Business Starter*)
-Assinado o plano mais básico, já é automaticamente definido o *usuário Master* do Google Workspace do cliente.
-Esse usuário só deve ser usado para a *criação do Work Space - assinatura* e outras tarefas críticas, como o cancelamento da assinatura por exemplo.  
-O usuário também tem uma serie de outros privilégios como acesso completo ao console de administração do Google workspaces e acesso a dados de faturamento.
-*Usuário Master jamais deve ser usado no dia a dia.*
-É o único usuário com poderes para cancelar a assinatura do Google Workspace.  
-
-**A assinatura do Google Workspace deve estar no estado ATIVA para que tenha início a instalação do IW-Telemedicina-API.** 
-
-Obs:  
-Se o cliente já possui assinatura do Google  Workspace, então o usuário Master já existe. 
-E o cliente deve verificar se a conta está ativa.  
-A conta estando suspensa, mesmo que existente, impede a instalação do IW-Telemedicina-API.
-Um pequeno atraso ou irregularidade no pagamento mensal por exemplo pode resultar em suspenção da conta.
+# Procedimento de Pré-instalação do IW-TELEMEDICINE-API - Google Workspace da Iberwan.  
 
 2. Criar usuário adicional infra@<customer-domain> no Google Workspace do cliente:  
 Usar o acesso do usuário Master para criar o usuário infra@<customer-domain> no Google Workspace do cliente.  
