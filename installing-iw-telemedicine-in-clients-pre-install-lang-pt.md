@@ -1,4 +1,4 @@
-# ETAPA 0
+# ETAPA 1
 ## Pré-instalação do IW-TELEMEDICINE-API - Google Workspace da Iberwan.  
 
 
@@ -58,6 +58,6 @@ Segue o link com os passos para gerar o par de chaves de criptografia:
 [procedimento para gerar a chave publica rsa](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)
 
 
-Passar para a Etapa 1:  
+Passar para a Etapa 2:  
 [Etapa 2 de inatalação Iw-Telemedicine-API](installing-iw-telemedicine-in-clients-clasp-cli-lang-pt.md)
 
