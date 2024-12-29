@@ -41,7 +41,7 @@ A etapa 2 de instalação do IW-Telemedicina-API fluirá de modo mais suave em m
 * Habilitar o WLS2 para Windows.  
 * Instalar o WSL2 e o Ubuntu 20.04 LTS.  
 A Microsoft disponibiliza o uso do Linux ao mesmo tempo que o Windows.  
-Com o WLS2 (Windows Linux Subsystem), o Windows pode ter um sistema operacional Linux *embarcado*.
+Com o WLS2 (Windows Linux Subsystem), o Windows pode ter um sistema operacional Linux *embarcado*.  
 Não há necessidade de uma máquina muito poderosa, desde que consiga rodar o Windows 10/11.
 
 >Todos os comandos da etapa 2 de instalação do IW-Telemedicina-API podem ser executados em um terminal do WLS2.
@@ -49,23 +49,15 @@ Usar o WLS2 é a nossa recomendação para quem só pode usar uma maquina Window
 >Existem outras formas de usar Linux dentro de máquinas windows, mas o WLS2 é a mais simples e tem a vantagem de ter um terminal do Linux dentro do Windows.
 >O WLS2 é uma tecnogia que a Microsoft vem desenvolvendo a mais de uma década e hoje se encontra em sua versão 2 e com boa maturidade.
 >Está disponivel para todas as máquinas com Windows 10/11.   
-
-
-
+  
 **IMPORTANTE:**  
-> Dados da máquina que será usada para instalar a IW-Telemedicina-API devem ser informados a Ibewan.  
+> Dados da máquina que será usada para instalar a IW-Telemedicina-API devem ser informados para o Hélio.  
 Esses dados se resumem em passar uma chave publica rsa gerada por um programa muito comum em maquinas linux chamado *sshkey-gen*.  
-recomenda-se enviar essa chave por email para o suporte da Iberwan que providenciará os devidos acessos.  
-Após o termino bem sucedido da instalação, essa chave publica rsa será removida. Qulaer nova instalação ou atualização da IW-Telemedicina-API deverá ser gerada uma nova chave publica rsa.  
-
+recomenda-se enviar essa chave por email.  
+Segue o link com os passos para gerar o par de chaves de criptografia:  
 [procedimento para gerar a chave publica rsa](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)
 
 
-7. Assinar o termo de sigilo da Iberwan
-O cliente deve entrar em contato com o suporte da Iberwan para assinar o termo de sigilo.
-
-
-
-O **Cliente** tendo providenciado todos os itens acima, pode passar para a etapa 2 de Instalação do IW-Telemedicina-API.  
+Passar para a Etapa 1:  
 [Etapa 2 de inatalação Iw-Telemedicine-API](installing-iw-telemedicine-in-clients-clasp-cli-lang-pt.md)
 
