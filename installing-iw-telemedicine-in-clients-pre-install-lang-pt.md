@@ -1,5 +1,5 @@
 # ETAPA 0
-## Procedimento de Pré-instalação do IW-TELEMEDICINE-API - Google Workspace da Iberwan.  
+## Pré-instalação do IW-TELEMEDICINE-API - Google Workspace da Iberwan.  
 
 1. **Criar usuário adicional infra.<custopmer_name>@iwsoftware.com.br no Google Workspace do cliente:**  
 Usar o acesso do usuário Master para criar o usuário infra.<customer_name>@iwsoftware.com.br no Google Workspace da Iberwan.  
