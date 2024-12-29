@@ -1,21 +1,15 @@
 # Procedimento de Pré-instalação do IW-TELEMEDICINE-API - Google Workspace da Iberwan.  
 
-2. Criar usuário adicional infra@<customer-domain> no Google Workspace do cliente:  
-Usar o acesso do usuário Master para criar o usuário infra@<customer-domain> no Google Workspace do cliente.  
-O usuário infra@<customer-domain> é o usuário que será usado para instalar a IW-Telemedicina-API.  
-O cliente tem liberdade para definir o nome que bem enteder para esse usuário.  
-Sugerimos o nome infra@<customer-domain> apenas para manter nossas instalações padronizadas. (substituir <customer-domain> pelo domínio do cliente)  
+1. Criar usuário adicional infra.<custopmer_name>@iwsoftware.com.br no Google Workspace do cliente:  
+Usar o acesso do usuário Master para criar o usuário infra.<customer_name>@iwsoftware.com.br no Google Workspace da Iberwan.  
+O usuário infra.<Custpmer_Name><>@iwsoftware.com.br é o usuário que será usado para instalar a IW-Telemedicina-API para o client específico.  
 
 É impressindível a criação desse usuário. Ele é *pivot* para todas as integrações com o sistema IW-Care.  
-**Sem a existencia desse usuário não é possível instalar a IW-Telemedicina-API.**  
+**Sem a existência desse usuário não é possível instalar a IW-Telemedicina-API.** para um cliente.  
 
-Esse usuário extra implica em custos adicionais para o cliente (aprox. $US 5 a $US 7 por mês para contas do tipo *Business Starter*)    
-Conferir junto ao Google os preços atualizados, mas não devem fugir muito desses valores.  
-É o único custo que o IW-Telemedicina-API acrescenta além da assinatura básica da plataforma Google Workspace.  
-
-Ao criar o usuário infra@<customer-domain>, o cliente deve definir uma senha para ele.  
+Ao criar o usuário infra.<Customer_Name>@iwsoftware.com.br, deve-se definir uma senha para ele.  
 A senha deve ser forte e segura.  
-O usuário infra@<customer-domain> deve ter acesso a todos os recursos do Google Workspace do cliente.  
+Esse usuário deve ter acesso a todos os recursos do Google Workspace da Iberwan.  
 (principalmente Gmail, Calendar, Drive, Meet, Sheets, Docs)
 
 3. Autorizar o usuário infra@<customer-domain> a receber requisições via *Google App Script API* dentro so seu Workspace:  
