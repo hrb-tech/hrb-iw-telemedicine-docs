@@ -1,12 +1,10 @@
 # Etapa 2  
 ## Instalação IW-Telemedicine no Google Workspace da Iberwan
 
->Apenas para quem usa máquina com Wndows 10/11.
-sugerimos usar WLS2 com Ubuntu 20.04 e o terminal do Linux para executar os comandos abaixo.
 
 1. **instalar os seguintes apps: git, nvm (node versions manager), NodeJS (latest 20), clasp (latest 2.4.2)**  
 Todos esses progranas podem ser instalados em qualquer Sistema Operacional (Windows, Linux, MacOS).  
-É recomendado usar Linux porque os apps de linha de comando como esses normalmente foram escritos pensando em Linux.  
+É recomendado usar Linux porque os apps de linha de comando como esses, normalmente foram escritos pensando-se em Linux.  
 Windows 10/11 oferece recurso de uso do Linux e Windows ao mesmo tempo (usando WLS2 - Windows Linux Subsystem).  
 Se você tem uma máquina Windows, primeiro ative o WLS2, e depois instale git, nvm, NodeJS, e clasp no Linux embarcado.
 Recomendamos usar o Linux Ubuntu 20.04 LTS embarcado no Windows 10/11. O Ubuntu 20.04 pode ser instalado baixando direto da Microsoft Store.  
@@ -60,7 +58,7 @@ E outros detalhes relacionados ao google App Scripts.
 ```bash
 clasp open
 ```    
-A execução do comando acima abre o IDE do Google App Script no navegador já devidamente posicionado no espaço do usuário.  
+A execução do comando acima abre o *IDE do Google App Script* no navegador e já devidamente posicionado no espaço do usuário infra@ e no Projeto que foi instalado.    
 
 >Aqui termina a segunda etapa de instalação do IW-Telemedicina-API.  
 A partir daqui, o usuário pode continuar a instalação na [Etapa 3](./installing-iw-telemedicine-in-clients-gas-ide-lang-pt.md) que é executada na tela do Navegador que acaba de ser aberta.  
