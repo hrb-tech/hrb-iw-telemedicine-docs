@@ -43,8 +43,12 @@ IMPORTANTE: todos os passos do procedimento possuem uma razão de ser e em espec
 Todas as versões do IW-Telemedicine_API devem obrigatoriamente serem instaladas com um sufixo que identifique precisamente a versão da mesma.
 Sem isso, devemos reiniciar do zero tudo. Faz parte da boa documentação da instalação.
  
-
-4. **use o programa *clasp* (instalado no passo 1) para fazer login no Google word Spaces usando as credenciais do usuário infra criado com a finalidade de instalar o IW-Telemedicine-API.**  
+4. Mude para o diretorio do repositorio clonado no passo anterior:
+   ```bash
+   cd googleAppScript-IW-Telemedicine-API_${TAG}
+   ```
+   
+5. **use o programa *clasp* (instalado no passo 1) para fazer login no Google word Spaces usando as credenciais do usuário infra criado com a finalidade de instalar o IW-Telemedicine-API.**  
 ```bash
 clasp login  
 ```  
