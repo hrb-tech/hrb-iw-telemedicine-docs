@@ -2,10 +2,10 @@
 
 Para atualizar o projeto IW-Telemedicine-API em qualquer cliente da Iberwan,  
 a seguinte estratégia deve ser usada:   
-> Instalar a nova versão como se fosse a primiera instalação e testá-la de ponta aponta para garantir que tudo está funcionando corretamente.
+> Instalar a nova versão como se fosse a primeira instalação e testá-la de ponta aponta para garantir que tudo está funcionando corretamente.
 Mudar o parametro 151 de todos os bancos do cliente, apontando URL da nova vesão.
 Fazer mais um teste final de funcionamento de criação de uma teleconsulta. Idealmente na base de treinamento e usando paciente de teste.
-Após teste final com sucesso, deletar a versão antiga imediatamente. A existencia de duas ou mais versões da telemedicina pode criar confusões dificeis de serem diagnósticadas prejudicando o Cliente.
+Após teste final com sucesso, deletar a versão antiga imediatamente. A existência de duas ou mais versões da telemedicina pode criar confusões dificeis de serem diagnósticadas prejudicando o Cliente.
 
 
 A seguir temos todos os passos para fazer a atualização do IW-Telemedine-API:  
