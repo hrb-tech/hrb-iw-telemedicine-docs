@@ -40,7 +40,7 @@ git clone https://github.com/username/googleAppScript-IW-Telemedicine_API.git go
 ```
 
 IMPORTANTE: todos os passos do procedimento possuem uma razão de ser e em especial, essa sequencia de comandos acima, tem haver com nossos padrões de instalação.  
-Todas as versões do IW-Telemedicine_API devem obrigatoria serem instaladas com um sufixo que identifique precisamente a versão da mesma.
+Todas as versões do IW-Telemedicine_API devem obrigatoriamente serem instaladas com um sufixo que identifique precisamente a versão da mesma.
 Sem isso, devemos reiniciar do zero tudo. Faz parte da boa documentação da instalação.
  
 
