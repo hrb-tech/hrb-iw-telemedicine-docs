@@ -1,42 +1,35 @@
 # Procedimento de atualização do IW-Telemedicine-API
 
 Para atualizar o projeto IW-Telemedicine-API em qualquer cliente da Iberwan,  
-recomendamos a seguinte estratégia:   
-> Implantar o novo projeto e testar a nova versão para garantir que tudo está funcionando corretamente.
-Depois de obter a nova URL onde os novos scripts irão responder as requisições HTTP,  
-e configurar o IW-Care para operar com a nova URL, criando varias tele consultas usando as telas do IW-Care e simular todo o fluxo de tele-consultas.  
+a seguinte estratégia deve ser usada:   
+> Instalar a nova versão como se fosse a primiera instalação e testá-la de ponta aponta para garantir que tudo está funcionando corretamente.
+Mudar o parametro 151 de todos os bancos do cliente, apontando URL da nova vesão.
+Fazer mais um teste final de funcionamento de criação de uma teleconsulta. Idealmente na base de treinamento e usando paciente de teste.
+Após teste final com sucesso, deletar a versão antiga imediatamente. A existencia de duas ou mais versões da telemedicina pode criar confusões dificeis de serem diagnósticadas prejudicando o Cliente em questão.
+
 
 A seguir temos todos os passos para fazer a atualização do IW-Telemedine-API:  
 
-*Step 1:* Faser uma cópia se segurança (backup) do Projeto no Google Drive do usário que instalou (Usuário do Google Work Spaces).
-1. Acessar drive.google.com e fazer login com a conta do Google Work Space.
-2. Localizar o projeto, usando pesquisar pelo nome do projeto.
-3. Clicar com o botão direito no arquivo do projeto
-4. Selecionar a opção "Fazer uma cópia"
 
-Uma cópia do projeto é criada.
-Esta cópia é independente do projeto original.  
-A cópia não estárá vinculada ao projeto original de nenhuma forma.  
-A cópia não estará Implantada (Deployed), mesmo que o projeto original esteja Implantado.  
-
-**Importante Observar:  
-A cópia de segurnça criada nessa etapa deve ser deletada do Google Drive depois dos testes da nova versão do IW-Telemedicine forem concluídos.**
-
-*Step 2:* executar o mesmo procedimento de instalação inicial [Installation procedure](installing-iw-telemedicine-in-clients-lang-pt.md)
+1. Executar o mesmo procedimento de instalação inicial [Installation procedure](installing-iw-telemedicine-in-clients-lang-pt.md)
+É importante observar que por **padrão** toda versão da IW-Telemedicine-API a ser instalada no cliente precisa ter **obrigatoriamente** a identificação da versão no seu proprio nome. Conforme orientações presentes no próprio procedimento de instalação inicial.
+O nome em si do projeto no GitHub fica como prefixo e acrescenta-se no final _<TAG da nova versão no git - branch main> 
   
 
-*Step 3:* Do tests creating, updating and deleting consult events using the Iw-Care cofigured to access the new deployment.
-Remember to verify in the Calendar of target Google's Account all the actions executed in the tests. 
+2. Fazer testes de ponta a ponta da nova versão:
+Criando, atualizando e deletando eventos de teleconsultas usando Iw-Care configurado para acessar a nova versão.
+Lembre-se de verificar no Calendário do usuário correto a respectiva criação de agendas com respectivos eventos de tele-consultas.   
 
-*Step 4:* Se todos os testes passarem com sucesso, remover comletamente  acopia feita no passo 1 em  2 lugares;
-na pasta onde o projeto reside no Google Drive and também na paste de lixo.
+3. Se todos os testes passarem com sucesso, atualizar na tela 151 a nova URL da IW-Telemedicne-API em todos os bancos do cliente;
+
+4. Deletar completamente a versão antiga.
 **Todas as referencias para o projeto antigo devem ser removidas.
-Mesmo que estejam na pasta de lixo do Google Drive**
-Agindo desse modo serão evitados muitos possǘeis conflitos com a nova versão e deixa o ambiente limpo.
+ATENÇÃO: no Google Workspace, quando deletamos um projeto de Action Script, ele vai para a pasta de lixo.
+Ele precisa ser deletado também da pasta de lixo.
+Agindo desse modo serão evitados muitos possíveis conflitos com a nova versão, deixando o ambiente limpo.
 A presença de mais um Script com os mesmos objetivos podem causar problemas do tipo:
 * erros humanos. Dupla publicação do IW-Telemedicine-API.
-* prblemas de manutenção. Acesso aidental a versão incorreta.
-* security problems. Accidental access to the wrong version.  
-* além de outros.
+* problemas de manutenção e segurança. Acesso acidental a versão incorreta.
+* além de outros.  
 
 
