@@ -30,10 +30,11 @@ mv googleAppScript-IW-Telemedicine_API googleAppScript-IW-Telemedicine_API_${TAG
 Esta sequencia de comandos fará:
 * Clone do repositório
 * Obtem a Tag mais recente do branch corrente
-Renomeia o diretório incluindo o nome da tag como sufixo
+* Renomeia o diretório incluindo o nome da tag como sufixo
+  
 O nome final do diretório ficará: googleAppScript-IW-Telemedicine_API_v1.2.3 (assumindo que a ultima tag é v1.2.3)
 
-Para uma solução mais conpacta, o comando abaixo de uma única linha pode usado:  
+Para uma solução mais compacta, o comando abaixo de uma única linha, também pode ser usado:  
 ```bash
 git clone https://github.com/username/googleAppScript-IW-Telemedicine_API.git googleAppScript-IW-Telemedicine_API_$(git -C googleAppScript-IW-Telemedicine_API describe --tags --abbrev=0)
 ```
