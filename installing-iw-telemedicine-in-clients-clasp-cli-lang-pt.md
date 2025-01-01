@@ -20,10 +20,28 @@ Este commando acima só irá funcionar se a maquina tiver o git instalado e a ch
 (Essa chave publica é solicitada na etapa de pre-instalação).  
 Informação de como gerar a chave publica está presente na Etapa 1 de pré-instalação.  
 Se vc chegou até aqui é porque vc já deve ter cumprido essa exigencia. Caso não interrompa o processo de instalação nesse ponto e continue quando pronto.*  
-3. **Usar comando linux *cd* para tornar o diretorio onde o repositorio foi clonado o diretório corrente:**  
+3. **Usar os comandos linux a seguir :**  
 ```bash
 cd googleAppScript-IW-Telemedicine-API
+TAG=$(git describe --tags --abbrev=0)
+cd ..
+mv googleAppScript-IW-Telemedicine_API googleAppScript-IW-Telemedicine_API_${TAG}
 ```  
+Esta sequencia de comandos fará:
+* Clone do repositório
+* Obtem a Tag mais recente do branch corrente
+Renomeia o diretório incluindo o nome da tag como sufixo
+O nome final do diretório ficará: googleAppScript-IW-Telemedicine_API_v1.2.3 (assumindo que a ultima tag é v1.2.3)
+
+Para uma solução mais conpacta, o comando abaixo de uma única linha pode usado:  
+```bash
+git clone https://github.com/username/googleAppScript-IW-Telemedicine_API.git googleAppScript-IW-Telemedicine_API_$(git -C googleAppScript-IW-Telemedicine_API describe --tags --abbrev=0)
+```
+
+IMPORTANTE: todos os passos do procedimento possuem uma razão de ser e em especial, essa sequencia de comandos acima, tem haver com nossos padrões de instalação.  
+Todas as versões do IW-Telemedicine_API devem obrigatoria serem instaladas com um sufixo que identifique precisamente a versão da mesma.
+Sem isso, devemos reiniciar do zero tudo. Faz parte da boa documentação da instalação.
+ 
 
 4. **use o programa *clasp* (instalado no passo 1) para fazer login no Google word Spaces usando as credenciais do usuário infra criado com a finalidade de instalar o IW-Telemedicine-API.**  
 ```bash
