@@ -25,7 +25,7 @@ Se vc chegou até aqui é porque vc já deve ter cumprido essa exigencia. Caso n
 cd googleAppScript-IW-Telemedicine-API
 TAG=$(git describe --tags --abbrev=0)
 cd ..
-mv googleAppScript-IW-Telemedicine_API googleAppScript-IW-Telemedicine_API_${TAG}
+mv googleAppScript-IW-Telemedicine-API googleAppScript-IW-Telemedicine-API_${TAG}
 ```  
 Esta sequencia de comandos fará:
 * Clone do repositório
