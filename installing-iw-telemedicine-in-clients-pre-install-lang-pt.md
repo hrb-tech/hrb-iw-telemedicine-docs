@@ -2,20 +2,20 @@
 ## Pré-instalação do IW-TELEMEDICINE-API - Google Workspace da Iberwan.  
 
 
-1. **Criar usuário adicional infra.<custopmer_name>@iwsoftware.com.br no Google Workspace do cliente:**  
+1. **Criar usuário adicional infra.<customer_name>@iwsoftware.com.br no Google Workspace do cliente:**  
 Usar o acesso do usuário Master para criar o usuário infra.<customer_name>@iwsoftware.com.br no Google Workspace da Iberwan.  
-O usuário infra.<Customer_Name><>@iwsoftware.com.br é o usuário que será usado para instalar a IW-Telemedicina-API para o cliente específico.
-(Substituir <Customer_Name> pelo nome da empresa cliente).    
+O usuário infra.<customer_name><>@iwsoftware.com.br é o usuário que será usado para instalar a IW-Telemedicina-API para o cliente específico.
+(Substituir <customer_name> pelo nome da empresa cliente).    
 
 É impressindível a criação desse usuário. Ele é o *pivot* para todas as integrações IW-Telemedicine-API com o sistema IW-Care em um cliente.  
 **Sem a existência desse usuário não é possível instalar a IW-Telemedicina-API.** para um cliente.  
 
-Ao criar o usuário infra.<Customer_Name>@iwsoftware.com.br, deve-se definir uma senha para ele.  
+Ao criar o usuário infra.<customer_name>@iwsoftware.com.br, deve-se definir uma senha para ele.  
 A senha deve ser forte e segura.  
 Esse usuário deve ter acesso a todos os recursos do Google Workspace da Iberwan.  
 (principalmente Gmail, Calendar, Drive, Meet, Sheets, Docs)
 
-2. **Autorizar o usuário infra.<Customer_Name>@iwsoftware.com.br a receber requisições via *Google App Script API* dentro so seu Workspace:**  
+2. **Autorizar o usuário infra.<customer_name>@iwsoftware.com.br a receber requisições via *Google App Script API* dentro so seu Workspace:**  
 Só o próprio usuário infra@<customer-domain> pode autorizar o acesso ao seu próprio Workspace via *API Google App Script*. 
 Todas as comunicações no momento de instalação do IW-Telemedicina-API são feitas via *API Google App Script*. (uma API interna do Google)  
 Todos os comandos *clasp* executados na segunda estapa da instalação são feitos via *API Google App Script*.
@@ -27,7 +27,7 @@ Para autorizar o usuário infra.<Customer_Name>@iwsoftware.com.br a receber requ
 
 
 3. **Autorizar a máquina que será usada para instalar a IW-Telemedicina-API no Google Workspace da Iberwan:**  
-A máquina pessoal do profissional da Iberwan que vai instalar/atualizar a IW-Telemedicine-API precisa ser autorizada a acessar o repositório onde se encontram os fontes da IW-Telemedicine-API.  
+A máquina pessoal do profissional da Iberwan que vai instalar/atualizar a IW-Telemedicine-API precisa ser autorizada a acessar o repositório onde se encontram os fontes.  
 Essa autorização só precisa ser feita uma unica vez para um dado profissional.
 E precisa ser repetida apenas nos casos onde o profissional trocar de máquina, formatar a sua máquina, ou quando o mesmo não for mais executar instalações/atualizações.
 (Ex: desligamento da Iberwan, mudança de atribuições, etc).  
