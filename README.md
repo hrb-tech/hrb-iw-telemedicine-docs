@@ -1,15 +1,15 @@
 # IW-Telemedicina-API Documentação  
 
 ## Introdução
->Este projeto tem como objetivo integrar o Sistema de Saúde IwCare da Incoway Inc. e os recursos do Google Meeting no Google Workspaces por meio de sua API de Calendário.  
+>Este projeto tem como objetivo integrar o Sistema de Saúde IwCare da Incoway Inc. (Iberwan do Brasil) e os recursos do Google Meeting disponibilizados no Google Workspaces por meio de sua API de Calendário.  
 A integração foi implementada usando o Google App Script que tem uma grande afinidade com o Google-Calendar-API (que na verdade pertence ao Google-Meeting-Resource para videoconferências).  
 Esta integração oferecerá ao Sistema IwCare as consultas de telemedicina integrando-o com excelente aplicativo de videoconferência do Google Meeting.  
-Esse tipo de abordagem abstrai toda a complexidade relacionada ao padrão WebRTC e sua infraestrutura (Signaling, Stun and Turn servers), sem falar no aplicativo GUI que deve ser escrito para orquestrar tudo isso e oferecer ao usuário final uma boa experiência de uso. Acrescentando o fato de que este App deve ser executado em diferentes plataformas (ios, android, windows, macOS, linux,...) com diferentes tamanhos de tela.
-O aplicativo Web/mobile do Google Meeting cuida de todos esses detalhes e muitos outros da infra-estrura de comunicação para gartantir videos conferencias com boa qualidade de som e vídeo.    
+Esse tipo de abordagem abstrai toda a complexidade relacionada ao padrão WebRTC e sua infraestrutura (Signaling, Stun and Turn servers), sem falar no aplicativo GUI que deve ser escrito para orquestrar tudo isso e oferecer ao usuário final uma boa experiência de uso. Acrescentando o fato de que os diversos usuários da Telemedicina podem usar diferentes plataformas e dispositivos (ios, android, windows, macOS, linux,...) com diferentes tamanhos de tela.
+O aplicativo Google Meeting cuida de todos esses detalhes e muitos outros da infra-estrura de comunicação, para garantir video-conferências com boa qualidade de som e vídeo.    
   
 A plataforma Google App Scripts tem 2 objetos javascript pré-configurados: CalendarApp e Calendar. Usando esses 2 objetos, é possível executar processos complexos com poucas linhas de código. Esses 2 objetos têm alguma sobreposição de funcionalidades, onde é possível implementar um recurso com ambos. Dependendo do que se deseja fazer, deve-se optar pelo objeto onde a implementação seja mais simples. 
 
-**A unica atitude que o Cliente precisa ter é contratar o IW Telemedicine, bastando contactar o setor comercial da Iberwan**  
+**A unica atitude que os Clientes da Iberwan precisam ter é a de contratar o IW Telemedicine, contactando o setor comercial da Iberwan**  
 
 >A direção da Iberwan dando o OK, ela acionará o suporte para executar os prodecimentos de instalação/atualização descritos abaixo.
 
