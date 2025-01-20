@@ -11,16 +11,18 @@ A plataforma Google App Scripts tem 2 objetos javascript pré-configurados: Cale
 
 **A unica atitude que os Clientes da Iberwan precisam ter é a de contratar o IW Telemedicine, contactando o setor comercial da Iberwan**  
 
->A direção da Iberwan dando o OK, ela acionará o suporte para executar os prodecimentos de instalação/atualização descritos abaixo.
+>A direção da Iberwan dando o OK, ela acionará o suporte para executar os procedimentos de instalação/atualização descritos abaixo.
 
-## Instação e Atualização:  
+## Instação:  
 
 [Procedimento de instalação - Português Brasileiro](installing-iw-telemedicine-in-clients-lang-pt.md)
+
+## Atualização:
 
 [Procedimento de atualização - Português Brasileiro](updating-iw-telemecine-in-clients-lang-pt.md)
 
   
-## Algumas informações sobre o projeto
+## Algumas informações importantes sobre o projeto
 
 
 ### formato de data e hora
@@ -83,9 +85,9 @@ Mas para a maioria dos clientes da Iberwan, um único usuário do Google Workspa
 Fazendo isso, eles farão uma videoconferência.  
 
 ### Implementação
-Cada vez que instalamos ou publicamos uma nova versão do IW-Teemedicine-API no Google Works Spaces, é gerada uma nova URL de acesso a API.  
-Essa URL é a mesma para todas as funcionalidades.  
-Chamamos ela de URL base. Cada implantação específica do Iw-Telemedicine-API só aceitará requisições dessa URL base gerada especificamente para ela.  
+Cada vez que publicamos (ou seja instalamos ou atualizamos) uma nova versão do IW-Teemedicine-API no Google Workspaces, é gerada uma nova URL de acesso a IW-Telemedicine-API.  
+**Chamamos ela de URL base. Cada implantação específica do Iw-Telemedicine-API só aceitará requisições dessa URL base gerada especificamente para ela.**  
+
 
 ### URL base do IW-Telemedicine-API;
 Apenas a título de exemplo, aqui está uma URL base típica do IW-Telemedicine-API.  
@@ -99,13 +101,10 @@ Este projeto usa abordagem SERVERLESS. Isso significa que o Google fornece toda 
 
 *IMPORTANTE:*  
 **Esta URL base sempre muda quando um novo projeto é implantado. Ou seja quando é instalado/atualizado.**
-Prestar muita atenção nisso.  
+*Prestar muita atenção nisso.*  
+A url base é especifica para cada implantação da Iw-Telemedicine-API e cada implantação é configurada para receber requisições somente da sua respectiva URL BASE.   
   
->Diferentes ações podem ser acessadas usando a mesma URL BASE, e passando os parâmetros corretos no corpo de cada requisição HTTP POST.
-Somente requisições HTTP POST são aceitas.  
-Requisições HTTP GET não serão respondidas.
-Todas requisições devem ter no seu corpo um atributo chamado "action" que identifica a ação que queremos executar e   
-os demais parametros associados a cada ação.
+
 
 Esta primeira versão implementa 8 "actions":
 
@@ -118,8 +117,10 @@ createIwTeleconsultUsingCalendar
 IddelIwTeleconsult  
 recreateProfessionalAgenda  
   
-Para executar qualquer uma dessas ações, é necessário acessar a URL base padrão, passando no corpo da requisição POST, um objeto JSON com todos os parâmetros necessários a respectiva ação. Somente requisições HTTP POST são aceitas. Requisições GET não serão respondidas. como também nenhum outro método HTTP é aceito.  
-
+Para executar qualquer uma dessas ações, é necessário acessar a URL base padrão, passando no corpo da requisição POST, um objeto JSON com todos os parâmetros necessários a respectiva ação.  
+Somente requisições HTTP POST são aceitas. Requisições GET não serão respondidas. como também nenhum outro método HTTP é aceito.  
+Todas requisições devem ter no seu corpo um atributo chamado "action" que identifica a ação que queremos executar e   
+os demais parametros específicos de cada ação.  
 Cada ação tem atributos específicos. Seu próprio objecto JSON (payload). E cada resposta tem também sua própria estrutura (repsonse payload).  
 
   
