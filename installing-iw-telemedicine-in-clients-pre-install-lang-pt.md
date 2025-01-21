@@ -16,11 +16,11 @@ Esse usuário deve ter acesso a todos os recursos do Google Workspace da Iberwan
 (principalmente Gmail, Calendar, Drive, Meet, Sheets, Docs)
 
 2. **Autorizar o usuário <customer_name>@iwsoftware.com.br a receber requisições via *Google App Script API* dentro so seu Workspace:**  
-Só o próprio usuário infra@<customer-domain> pode autorizar o acesso ao seu próprio Workspace via *API Google App Script*. 
+Só o próprio usuário pode autorizar o acesso ao seu próprio Workspace via *API Google App Script*. 
 Todas as comunicações no momento de instalação do IW-Telemedicina-API são feitas via *API Google App Script*. (uma API interna do Google)  
 Todos os comandos *clasp* executados na segunda estapa da instalação são feitos via *API Google App Script*.
 A ausência dessa autorização impede a instalação da IW-Telemedicina-API na conta do usuário criado para o cliente dentro do Workspace da Iberwan.  
-Para autorizar o usuário infra.<Customer_Name>@iwsoftware.com.br a receber requisições via *Google App Script API*, o usuário infra deve:
+Para autorizar o usuário <Customer_Name>@iwsoftware.com.br a receber requisições via *Google App Script API*, o usuário infra deve:
 * Fazer login no *Google Workspace da Iberwan*  
 * Acessar o link: https://script.google.com/home/usersettings 
 * E ligar a chave "Allow scripts to run on your domain".
@@ -29,9 +29,9 @@ Para autorizar o usuário infra.<Customer_Name>@iwsoftware.com.br a receber requ
 3. **Autorizar a máquina que será usada para instalar a IW-Telemedicina-API no Google Workspace da Iberwan:**  
 A máquina pessoal do profissional da Iberwan que vai instalar/atualizar a IW-Telemedicine-API precisa ser autorizada a acessar o repositório onde se encontram os fontes.  
 Essa autorização só precisa ser feita uma unica vez para um dado profissional.
-E precisa ser repetida apenas nos casos onde o profissional trocar de máquina, formatar a sua máquina, ou quando o mesmo não for mais executar instalações/atualizações.
+Precisará ser repetida apenas nos casos onde o profissional trocar de máquina, formatar a sua máquina, ou quando o mesmo não for mais executar instalações/atualizações.
 (Ex: desligamento da Iberwan, mudança de atribuições, etc).  
-> É necessário que a máquina tenha um bom e estável acesso a internet e um Navegador moderno instalado (preferível Google Chrome).
+> É necessário que a máquina tenha um bom e estável acesso à internet e um Navegador moderno instalado (preferível Google Chrome).
 Recomendamos também que seja uma maquina **Linux**, porque simplifica a instalação e manutenção. Maquinas com MacOS (Apple) também podem ser usadas com as mesmas facilidades, embora não testado.
 > Máquinas Windows podem ser usadas, mas será necessário instalação de software adicional e configurações extras.  
 A etapa 2 de instalação do IW-Telemedicina-API fluirá de modo mais suave em máquinas linux. Para todas as demais etapas de instalação, o sistema operacional não importa.  
@@ -39,13 +39,13 @@ A etapa 2 de instalação do IW-Telemedicina-API fluirá de modo mais suave em m
 >Obs Apenas para máquinas Windows, sabe-se:  
 * É necessário instalar o Google Chrome. O Navegdor nativo do windows costuma apresentar erros em alguns casos. Motivos desconhecidos.
 * Habilitar o WLS2 para Windows.  
-* Instalar o WSL2 e o Ubuntu 20.04 LTS.  
+* Instalar o WLS2 e o Ubuntu 20.04 LTS. (existem versões mais atuais do Ubuntu para WLS2, recomandamos 20.04 LTS por ser a versão que usamos nos testes)  
 A Microsoft disponibiliza o uso do Linux ao mesmo tempo que o Windows.  
-Com o WLS2 (Windows Linux Subsystem), o Windows pode ter um sistema operacional Linux *embarcado*.  
+Com o WLS2 ativado (Windows Linux Subsystem), o Windows pode ter um sistema operacional Linux *embarcado*.  
 Não há necessidade de uma máquina muito poderosa, desde que consiga rodar o Windows 10/11.
 
 >Todos os comandos da etapa 2 de instalação do IW-Telemedicina-API podem ser executados em um terminal do WLS2.
-Usar o WLS2 é a nossa recomendação para quem só pode usar uma maquina Windows.
+Usar o WLS2 é a nossa recomendação para quem só pode usar máquina Windows.
 >Existem outras formas de usar Linux dentro de máquinas windows, mas o WLS2 é a mais simples e tem a vantagem de ter um terminal do Linux dentro do Windows.
 >O WLS2 é uma tecnogia que a Microsoft vem desenvolvendo a mais de uma década e hoje se encontra em sua versão 2 e com boa maturidade.
 >Está disponivel para todas as máquinas com Windows 10/11.   
