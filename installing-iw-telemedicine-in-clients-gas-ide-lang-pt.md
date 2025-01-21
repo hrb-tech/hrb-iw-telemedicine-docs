@@ -5,7 +5,7 @@
 Executada usando o IDE do Google para App Scripts que funciona direto do Navegador (Google Chrome de preferência)  
 *Esses passos devem ser executados pelo cliente, com suporte de um consultor da Iberwan se o cliente assim o desejar.*
   
->Essensialmente, os passos abaixo irão realizar todas as autorizações de execução dos scripts como se fossem dispadodos pelo usuário infra,
+>Essensialmente, os passos abaixo irão realizar todas as autorizações de execução dos scripts como se fossem dispadodos pelo usuário da respectiva conta (<nome_cliente@iwsoftware.com.br>),
 permitindo que os scripts do projeto carregados na etapa anterior sejam acessados na internet e também tenham acesso aos recursos necessários do Google Workspace.  
 Essas autorizações são *essenciais* para que o projeto funcione e sejam acessados via internet.  
 Além disso, será definida uma propriedade de projeto que será usada para validar a URL usada em todos as requisições HTTP
