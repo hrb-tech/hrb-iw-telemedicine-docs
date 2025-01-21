@@ -2,9 +2,9 @@
 ## Pré-instalação do IW-TELEMEDICINE-API - Google Workspace da Iberwan.  
 
 
-1. **Criar usuário adicional infra.<customer_name>@iwsoftware.com.br no Google Workspace do cliente:**  
+1. **Criar usuário adicional <customer_name>@iwsoftware.com.br no Google Workspace do cliente:**  
 Usar o acesso do usuário Master para criar o usuário infra.<customer_name>@iwsoftware.com.br no Google Workspace da Iberwan.  
-O usuário infra.<customer_name><>@iwsoftware.com.br é o usuário que será usado para instalar a IW-Telemedicina-API para o cliente específico.
+O usuário <customer_name><>@iwsoftware.com.br é o usuário que será usado para instalar a IW-Telemedicina-API para o cliente específico.
 (Substituir <customer_name> pelo nome da empresa cliente).    
 
 É impressindível a criação desse usuário. Ele é o *pivot* para todas as integrações IW-Telemedicine-API com o sistema IW-Care em um cliente.  
