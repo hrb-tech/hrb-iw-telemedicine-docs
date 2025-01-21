@@ -21,23 +21,24 @@ Este commando acima só irá funcionar se a maquina tiver o git instalado e a ch
 Informação de como gerar a chave publica está presente na Etapa 1 de pré-instalação.  
 Se vc chegou até aqui é porque vc já deve ter cumprido essa exigencia. Caso não interrompa o processo de instalação nesse ponto e continue quando pronto.*  
 3. **Usar os comandos linux a seguir :**  
-```bash
+```bash  
 cd googleAppScript-IW-Telemedicine-API
+```
+```bash
 TAG=$(git describe --tags --abbrev=0)
+```  
+```bash  
 cd ..
+```
+```bash  
 mv googleAppScript-IW-Telemedicine-API googleAppScript-IW-Telemedicine-API_${TAG}
 ```  
-Esta sequencia de comandos fará: (para maior controle execute essa sequencia uma linha de cada vez)  
-* Clone do repositório
-* Obtem a Tag mais recente do branch corrente
-* Renomeia o diretório incluindo o nome da tag como sufixo
-  
-O nome final do diretório ficará: googleAppScript-IW-Telemedicine_API_v1.2.3 (assumindo que a ultima tag é v1.2.3)
 
-Para uma solução mais compacta, o comando abaixo de uma única linha, também pode ser usado:  
-```bash
-git clone https://github.com/username/googleAppScript-IW-Telemedicine_API.git googleAppScript-IW-Telemedicine_API_$(git -C googleAppScript-IW-Telemedicine_API describe --tags --abbrev=0)
-```
+Esta sequencia deve ser execurada uma linha de cada vez. Elas farão:  
+* Posicionamento do diretorio do projeto clonado como diretorio corrente.  
+* Obtenção a Tag mais recente do branch corrente (branch main)
+* troca o nome do diretrio do projeto clonado, incluindo no nome do mesmo a tag como sufixo (adequação ao padrao de instalação)  
+O nome final do diretório ficará: googleAppScript-IW-Telemedicine_API_v1.2.3 (assumindo que a ultima tag é v1.2.3)
 
 IMPORTANTE: todos os passos do procedimento possuem uma razão de ser e em especial, essa sequencia de comandos acima, tem haver com nossos padrões de instalação.  
 Todas as versões do IW-Telemedicine_API devem obrigatoriamente serem instaladas com um sufixo que identifique precisamente a versão da mesma.
