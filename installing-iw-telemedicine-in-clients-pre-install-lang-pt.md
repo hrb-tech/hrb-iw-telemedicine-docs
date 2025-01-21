@@ -15,7 +15,7 @@ A senha deve ser forte e segura.
 Esse usuário deve ter acesso a todos os recursos do Google Workspace da Iberwan.  
 (principalmente Gmail, Calendar, Drive, Meet, Sheets, Docs)
 
-2. **Autorizar o usuário infra.<customer_name>@iwsoftware.com.br a receber requisições via *Google App Script API* dentro so seu Workspace:**  
+2. **Autorizar o usuário <customer_name>@iwsoftware.com.br a receber requisições via *Google App Script API* dentro so seu Workspace:**  
 Só o próprio usuário infra@<customer-domain> pode autorizar o acesso ao seu próprio Workspace via *API Google App Script*. 
 Todas as comunicações no momento de instalação do IW-Telemedicina-API são feitas via *API Google App Script*. (uma API interna do Google)  
 Todos os comandos *clasp* executados na segunda estapa da instalação são feitos via *API Google App Script*.
