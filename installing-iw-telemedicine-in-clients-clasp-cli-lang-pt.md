@@ -32,7 +32,18 @@ cd ..
 ```
 ```bash  
 mv googleAppScript-IW-Telemedicine-API googleAppScript-IW-Telemedicine-API_${TAG}
-```  
+```
+
+```bash
+git clone git@github.com:hrbsystems/googleAppScript-IW-Telemedicine-API.git && \
+cd googleAppScript-IW-Telemedicine-API && \
+TAG=$(git describe --tags --abbrev=0) && \
+cd .. && \
+mv googleAppScript-IW-Telemedicine-API googleAppScript-IW-Telemedicine-API_${TAG} && \
+cd googleAppScript-IW-Telemedicine-API_${TAG}
+
+```
+
 
 Esta sequencia deve ser execurada uma linha de cada vez. Elas farão:  
 * Posicionamento do diretorio do projeto clonado como diretorio corrente.  
