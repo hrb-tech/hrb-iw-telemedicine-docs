@@ -27,7 +27,7 @@ TAG=$(git describe --tags --abbrev=0)
 cd ..
 mv googleAppScript-IW-Telemedicine-API googleAppScript-IW-Telemedicine-API_${TAG}
 ```  
-Esta sequencia de comandos fará:
+Esta sequencia de comandos fará: (para maior controle execute essa sequencia uma linha de cada vez)  
 * Clone do repositório
 * Obtem a Tag mais recente do branch corrente
 * Renomeia o diretório incluindo o nome da tag como sufixo
@@ -60,7 +60,13 @@ Todos os itens devem ser autorizados.
 Após autorizar, feche o Browser e continue os passos seguintes usando o terminal.  
 
   
-5. Use o comando *create* do *clasp* para criar um projeto do tipo Web App associado a conta do usuário logado:  
+5. Use o comando *create* do *clasp* para criar um projeto do tipo Web App associado a conta do usuário logado:
+**IMPORTANTE*: antes de dar esse comando é ncessario habilitar o uso da Google-AppScript-API na conta <nome-cliente>@iwsoftware.com.br no google workspace da Iberwan.
+Para fazer isso acesse https://script.google.com/home/usersettings no navegador que está logado na respectiva conta e habilite colocando em ON o respectivo flag
+se vc habilitou o flag recentemente, espere uns poucos minutos para que essa habilitação seja propagada dentro do infra do Google.
+Caso esse flag ainda não esteja habilitado ou mesmo não propagado ainda na infra do Gooogle, o comando abaixo retornará um erro, informando a necessidade dessa habilitação.
+nesse caso o comando deve ser repetido um tempo depois para que o projeto App Script possa ser criado de fato na respectiva conta.
+   
 ```bash
 clasp create --type webapp
 ```  
