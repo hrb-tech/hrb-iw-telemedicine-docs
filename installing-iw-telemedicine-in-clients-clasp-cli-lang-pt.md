@@ -7,7 +7,9 @@ Todos esses progranas podem ser instalados em qualquer Sistema Operacional (Wind
 É recomendado usar Linux porque os apps de linha de comando como esses, normalmente foram escritos pensando-se em Linux.  
 Windows 10/11 oferece recurso de uso do Linux e Windows ao mesmo tempo (usando WLS2 - Windows Linux Subsystem).  
 Se você tem uma máquina Windows, primeiro ative o WLS2, e depois instale git, nvm, NodeJS, e clasp no Linux embarcado.
-Recomendamos usar o Linux Ubuntu 20.04 LTS embarcado no Windows 10/11. O Ubuntu 20.04 pode ser instalado baixando direto da Microsoft Store.  
+Recomendamos usar o Linux Ubuntu 22.04 LTS embarcado no Windows 10/11. O Ubuntu 22.04 pode ser instalado baixando direto da Microsoft Store
+Escrevemos um script para Ubuntu 22.04 que instala/verifica a instalação de todos os apps listados acima alem de outros que são necessarios e não listados acima.
+  
 
 3. **clonar o repositorio do Github (https://github.com/hrbsystems/googleAppScript-IW-Telemedicine-API):**  
 Antes de tudo, criar um diretório temporário qualquer em sua maquina e se posicione nele usando o comando *cd*.  
@@ -51,12 +53,15 @@ Todas as versões do IW-Telemedicine_API devem obrigatoriamente serem instaladas
 Sem isso, devemos reiniciar do zero tudo. Faz parte da boa documentação da instalação. Embora possa parecer radical iniciar tudo do zero, a execução de
 tudo que antecede é muito rápida.  
   
-4. Mude para o diretorio do repositorio clonado no passo anterior:
+4. **Mude para o diretorio do repositorio clonado no passo anterior:**  
    ```bash
    cd googleAppScript-IW-Telemedicine-API_${TAG}
    ```
-   
-5. **use o programa *clasp* (instalado no passo 1) para fazer login no Google word Spaces usando as credenciais do usuário infra criado com a finalidade de instalar o IW-Telemedicine-API.**  
+5. **Excute o script *_prepare-basic-ubuntu-env.sh* **   
+   ```bash
+   ./_prepare-basic-ubuntu-env.sh
+   ```   
+6. **use o programa *clasp* (instalado no passo 1) para fazer login no Google word Spaces usando as credenciais do usuário infra criado com a finalidade de instalar o IW-Telemedicine-API.**  
 ```bash
 clasp login  
 ```  
