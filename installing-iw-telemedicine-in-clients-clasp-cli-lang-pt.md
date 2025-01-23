@@ -16,10 +16,11 @@ Use o comando abaixo dentro do diretório temporário que foi criado:
 git clone git@github.com:hrbsystems/googleAppScript-IW-Telemedicine-API.git
 ```  
 > *Obs:  
-Este commando acima só irá funcionar se a maquina tiver o git instalado e a chave pública ssh do usuário da maquina usada na instalção estiver cadastrada no github pelo suporte da Iberwan.    
-(Essa chave publica é solicitada na etapa de pre-instalação).  
-Informação de como gerar a chave publica está presente na Etapa 1 de pré-instalação.  
-Se vc chegou até aqui é porque vc já deve ter cumprido essa exigencia. Caso não interrompa o processo de instalação nesse ponto e continue quando pronto.*  
+Este commando clone acima só irá funcionar se a sua máquina tiver o git instalado e a chave pública ssh do seu usuário estiver cadastrada no github pelo suporte da Iberwan.    
+(Essa chave publica é criada na etapa 1 (pre-instalação).  
+Informação de como gerar a chave publica está presente na Etapa 1.  
+Se vc chegou até aqui é porque vc já deve ter cumprido essas exigências. Caso não, interrompa o processo de instalação nesse ponto e continue quando pronto.*
+  
 3. **Usar os comandos linux a seguir :**  
 ```bash  
 cd googleAppScript-IW-Telemedicine-API
@@ -41,13 +42,15 @@ cd googleAppScript-IW-Telemedicine-API_${TAG}
 Esta sequencia deve ser execurada uma linha de cada vez. Elas farão:  
 * Posicionamento do diretorio do projeto clonado como diretorio corrente.  
 * Obtenção a Tag mais recente do branch corrente (branch main)
-* troca o nome do diretrio do projeto clonado, incluindo no nome do mesmo a tag como sufixo (adequação ao padrao de instalação)  
+* troca o nome do diretrio do projeto clonado, incluindo no nome do mesmo a tag como sufixo (adequação ao padrao de instalação)
+* reposiciona no diretorio do projeto clonado.  
 O nome final do diretório ficará: googleAppScript-IW-Telemedicine_API_v1.2.3 (assumindo que a ultima tag é v1.2.3)
 
 IMPORTANTE: todos os passos do procedimento possuem uma razão de ser e em especial, essa sequencia de comandos acima, tem haver com nossos padrões de instalação.  
 Todas as versões do IW-Telemedicine_API devem obrigatoriamente serem instaladas com um sufixo que identifique precisamente a versão da mesma.
-Sem isso, devemos reiniciar do zero tudo. Faz parte da boa documentação da instalação.
- 
+Sem isso, devemos reiniciar do zero tudo. Faz parte da boa documentação da instalação. Embora possa parecer radical iniciar tudo do zero, a execução de
+tudo que antecede é muito rápida.  
+  
 4. Mude para o diretorio do repositorio clonado no passo anterior:
    ```bash
    cd googleAppScript-IW-Telemedicine-API_${TAG}
@@ -57,12 +60,11 @@ Sem isso, devemos reiniciar do zero tudo. Faz parte da boa documentação da ins
 ```bash
 clasp login  
 ```  
->Este comando deve ser executado no diretório do repositorio clonado.  
-Use o usuário (normalmente um endereço de email) e sua respectiva.  
-Somente o cliente tem essa informação.  
-Normalmente a execução do comando *clasp login* causa a abertura de um Navegador, mostrando a página *OAuth* de autorização pedindo autorização para várias coisas.  
+>Este comando deve ser executado no diretório do repositorio clonado. Deixe apenas 1 instância do Navegador Chrome aberta antes de executar clasp login.
+**MUITO CUIDADO:**A existencia de muitiplas instancias (janelas) do Nevegador Chrome pode criar confusão pois cada uma pode estar logada in um usuário distinto.**  
+Normalmente a execução do comando *clasp login* causa a abertura de uma aba no Navegador, mostrando a página *OAuth* de autorização pedindo autorização para várias coisas.  
 Todos os itens devem ser autorizados.  
-Após autorizar, feche o Browser e continue os passos seguintes usando o terminal.  
+Após autorizar, feche apenas a aba do Browser usada pelo login e continue os passos seguintes usando o terminal.  
 
   
 5. Use o comando *create* do *clasp* para criar um projeto do tipo Web App associado a conta do usuário logado:
