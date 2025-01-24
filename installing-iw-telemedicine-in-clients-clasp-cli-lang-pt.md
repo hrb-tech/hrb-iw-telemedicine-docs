@@ -15,7 +15,7 @@ Recomendamos usar o Linux Ubuntu 22.04 LTS embarcado no Windows 10/11. O Ubuntu 
 sudo apt-get update && sudo apt install -y git
 ```   
 
-2. Criar um direotrio temporário onde todos os trabalhos de instalação serão executados.
+2. Criar um direotrio temporário onde todos os trabalhos de instalação serão executados.  
 Sugerimos o nome "IW-Telemedicine-API-install-tmp" para esse diretório. Mas pode ser qualquer nome. 
 
 3. **clonar o repositório do Github (https://github.com/hrbsystems/googleAppScript-IW-Telemedicine-API):**  
