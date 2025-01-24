@@ -24,17 +24,18 @@ Na sequencia aparecerá a tela abaixo:
 Aqui pressione o botão: *create Deployment (criar Implantação)*  
 Na sequencia aparecerá a tela abaixo:  
 ![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-2-implantar.png)
+Presione o botão *Implantar (Deploy)*  
 Na sequencia aparecerá a tela abaixo:  
-![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-3-autorizar-acesso.png)
-Clique no botão azul Autorizar.  
-Na sequnêcia uma série de telas associadas ao processo de autorização irão se suceder.
-Não é recomendado exibir todas essas telas aqui no procedimento porque a aprencia dessas telas mudam com frequência.
-O Google está sempre mexendo nessas telas, pois segurança é uma questão levada muito a sério por ele.  
+![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-3-autorizar-acesso.png)  
+Clique no botão azul *Autorizar Acesso*.
+Agora, uma série de telas associadas ao processo de autorização irão se suceder.
+Não é recomendado mostrar todas essas telas aqui no procedimento porque a aparência delas mudam com frequência.
+O Google está sempre mexendo nessas telas. Segurança é uma questão levada muito a sério.  
 
-Ao final da implantação (Deployment), aparecerá a tela abaixo:  
+Ao final da implantação, aparecerá a tela abaixo:  
 ![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-5-concluído.png)  
 
-Essa tela oferece a possibilidade de copiar a URL BASE de acesso a aplicação.  
+Essa tela oferece a possibilidade de copiar a URL BASE de acesso à aplicação.  
 Essa URL é muito importante e deve ser guardada. Será usada em passos subsequentes.  
 Não se preocupe caso não tenha salvo essa URL. O IDE do Google App Scripts oferece recursos de consultar esse dado sempre que se desejar.   
   
@@ -45,7 +46,7 @@ Não se preocupe caso não tenha salvo essa URL. O IDE do Google App Scripts ofe
 2. **criar uma propriedade de projeto chamada: AUTHORIZED_URL**  
 Clicar na opção configurações (Settings) localizada do lado esquerdo do IDE.
 Rolar a tela (para baixo) até encontrar a opção: *script properties (propriedades do script)*
-Adicionar uma nova propriedade chamada: AUTHORIZED_URL e atribuir o valor da URL copiada da etapa anterior.  
+Adicionar uma nova propriedade chamada: AUTHORIZED_URL e atribuir o valor da URL BASE da instalação.  
 Prestar muita atenção na digitação do nome da propriedade, com todas as letras maiúsculas.
 
 Essa propriedade será usada para validar a URL usada em todas as requisições HTTP para esta instância do IW-Telemedicina-API que acaba de ser instalada.  
@@ -53,7 +54,8 @@ Essa propriedade será usada para validar a URL usada em todas as requisições 
 *Sem essa propriedade corretamente valorada, o IW-Telemedicina-API rejeitará todas as chamadas.*
 
 3. **Fazer testes de chamadas da IW-Telemedicne-API:**  
-fazer 6 testes usando os comandos abaixo. Cada teste usa uma linguagem de progração distinta para fazer as chamadas.
+Fazer 6 testes usando os comandos abaixo. Cada teste usa uma linguagem de progração distinta para fazer as chamadas.
+---  
 Os 2 comandos abaixo usam a linguagem Python  
 ```bash  
 python3 test-iw-telemedicine-api-call.py URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
@@ -70,8 +72,10 @@ Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de 
 A resposta deve ser algo como:  
 ```json  
 
-```  
-Os 2 comandos sequintes usam a linguagem java 8:  
+```
+---  
+
+Os 2 comandos sequintes usam a linguagem *Java 8*:  
 ```bash  
 java -jar (WIP...) URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
 ```  
@@ -88,8 +92,9 @@ A resposta deve ser algo como:
 ```json  
 
 ```  
+---  
 
-Os 2 comandos sequintes usam a linguagem Golang 1.21:  
+Os 2 comandos sequintes usam a linguagem *Golang 1.21*:  
 ```bash  
 test-iw-telemecine-api URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
 ```  
@@ -106,8 +111,9 @@ A resposta deve ser algo como:
 ```json  
 
 ```
-Esses testes são vitais para garantir que IW-Telemecine-API está acessivel a todos que sabem chamá-la de fato.
-Independente da tecnolgia usada na chamada.
+
+**Esses testes são vitais para garantir que IW-Telemecine-API está acessivel a todos que sabem chamá-la de fato.
+Independente da tecnologia usada na chamada.**  
 
 >Agora siga para a Etapa 4 da instalação do IW-Telemedicine-API:  
 [Etapa 4](installing-iw-telemedicine-in-clients-iwcare-config-lang-pt.md)
