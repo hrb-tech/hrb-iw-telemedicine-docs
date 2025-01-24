@@ -6,7 +6,8 @@ Máquinas windows podem ser usadas, mas necessitam de pacotes/configurações ad
 
 > somente para máquinas Windows:
 > Windows 10/11 oferece recurso de uso do Linux e Windows ao mesmo tempo (usando WLS2 - Windows Linux Subsystem).  
-Se você tem uma máquina Windows, ative o WLS2 e instale da loja da Microsoft o Linux Ubuntu 22.04 
+Se você tem uma máquina Windows, ative o WLS2 e instale da loja da Microsoft o Linux Ubuntu 22.04
+Instale o navegador Chrome no windows. O navegador Edge que vem nativamente com o Windows irá acusar erros.
 Recomendamos usar o Linux Ubuntu 22.04 LTS embarcado no Windows 10/11. O Ubuntu 22.04 pode ser instalado baixando direto da Microsoft Store
 
 1. **instalar o git:**
@@ -75,14 +76,14 @@ Normalmente a execução do comando *clasp login* causa a abertura de uma aba no
 A conta <nome_cliente>@iwsoftware.com.br deve ser selecionada e TODOS os itens devem ser autorizados.  
 Após autorizar, feche apenas a aba do Browser usada pelo login e continue os passos seguintes usando o terminal.  
 
-  
-6. Use o comando *create* do *clasp* para criar um projeto do tipo Web App associado a conta do usuário logado:
-**IMPORTANTE*: antes de dar esse comando é ncessario habilitar o uso da Google-AppScript-API na conta <nome-cliente>@iwsoftware.com.br no google workspace da Iberwan.
-Para fazer isso acesse https://script.google.com/home/usersettings no navegador que está logado na respectiva conta e habilite colocando em ON o respectivo flag
-se vc habilitou o flag recentemente, espere uns poucos minutos para que essa habilitação seja propagada dentro do infra do Google.
-Caso esse flag ainda não esteja habilitado ou mesmo não propagado ainda na infra do Gooogle, o comando abaixo retornará um erro, informando a necessidade dessa habilitação.
+6. Habilitar o uso da Google-Appscript-API na conta do <nome_cliente>@iwsoftware.com.br do Google Workspace da Iberwan:
+Após o clasp login executado no passo anterior, o navegador chrome já deve estar logado corretamente na conta <nome_cliente>@iwsoftware.com.br
+Para habilitar o uso da API do Google, acesse https://script.google.com/home/usersettings no navegador que está logado na respectiva conta e habilite colocando em ON o respectivo flag  
+Se vc habilitou agora o flag, espere uns poucos minutos para que essa habilitação seja propagada dentro do infra do Google.
+Caso esse flag ainda não esteja habilitado ou mesmo não propagado ainda na infra do Gooogle, o comando seguinte retornará um erro, informando a necessidade dessa habilitação.
 nesse caso o comando deve ser repetido um tempo depois para que o projeto App Script possa ser criado de fato na respectiva conta.
-   
+  
+7. Use o comando *create* do *clasp* para criar um projeto do tipo Web App associado a conta do usuário logado:
 ```bash
 clasp create --type webapp
 ```
@@ -96,8 +97,8 @@ Este comando usa uma série de infomações coletadas do ambiente que o usuário
 como:  
 Diretório corrente onde o comando foi dado que se tornará o nome do projeto dentro do Google Workspace do usuário.  
 Dados do usuário logado e suas respectivas credenciais de acesso ao Google Workspace.  
-Troca as extenções dos arguivos .js para .gs dentro do google work spaces. Somente a extensão.  
-E outros detalhes relacionados ao google App Scripts.  
+Troca as extenções dos arguivos .js para .gs dentro do projeto no Google Workspace. Somente a extensão.  
+E outros detalhes relacionados ao google App Scripts.  São muitos detalhes que o clasp faz automaticamente.
 
 7. **Abrir no Navegador padrão o projeto que foi carregado no passo anterior já dentro do Google Work Space do usuário usado na instalação:**   
 ```bash
