@@ -15,15 +15,15 @@ Seguem os passos:
 
 
 1. **implantar o projeto:**  
-Ao executar o ultimo passo da etapa anterior estaremos com o Navegador aberto no projeto do IW-Telemedicine-API carregado no Google Workspace do usuário infra correspondente.
-Clicar no botão *implantar (deploy)* e selecione a opção *manage deployments (gerenciar implantações)*    
+Ao executar o ultimo passo da etapa anterior estaremos com o Navegador aberto no projeto do IW-Telemedicine-API que acaba de ser carregado.  
+Clicar no botão azul *implantar (deploy)* localizado no topo do IDE e selecione a opção *gerenciar implantações (manage deployments)*    
 em seguida aparecerá a caixa de Diálogo abaixo:
 ![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-0.png)  
 Na sequencia aparecerá a tela abaixo:  
 ![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-1-criar-implantacao.png)  
 Aqui pressione o botão: *create Deployment (criar Implantação)*  
 Na sequencia aparecerá a tela abaixo:  
-![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-2-implantar.png)
+![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-2-implantar.png)  
 Presione o botão *Implantar (Deploy)*  
 Na sequencia aparecerá a tela abaixo:  
 ![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-3-autorizar-acesso.png)  
