@@ -20,22 +20,27 @@ Clicar no botão *implantar (deploy)* e selecione a opção *manage deployments 
 em seguida aparecerá a caixa de Diálogo abaixo:
 ![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-0.png)  
 Na sequencia aparecerá a tela abaixo:  
-![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-1.png)  
+![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-1-criar-implantacao.png)  
 Aqui pressione o botão: *create Deployment (criar Implantação)*  
 Na sequencia aparecerá a tela abaixo:  
-![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-2.png)
+![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-2-implantar.png)
 Na sequencia aparecerá a tela abaixo:  
-![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-3.png)
-**WIP - work in progess here ...**
+![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-3-autorizar-acesso.png)
+Clique no botão azul Autorizar.  
+Na sequnêcia uma série de telas associadas ao processo de autorização irão se suceder.
+Não é recomendado exibir todas essas telas aqui no procedimento porque a aprencia dessas telas mudam com frequência.
+O Google está sempre mexendo nessas telas, pois segurança é uma questão levada muito a sério por ele.  
 
 Ao final da implantação (Deployment), aparecerá a tela abaixo:  
-![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-4.png)  
+![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-5-concluído.png)  
 
-Essa tela oferece a possibilidade de copiar a URL de acesso a aplicação instalada.  
+Essa tela oferece a possibilidade de copiar a URL BASE de acesso a aplicação.  
+Essa URL é muito importante e deve ser guardada. Será usada em passos subsequentes.  
+Não se preocupe caso não tenha salvo essa URL. O IDE do Google App Scripts oferece recursos de consultar esse dado sempre que se desejar.   
+  
 **IMPORTANTE:**   
-**Todas as vezes que se instala ou atualiza o IW-Telemedicine-API, a URL base de acesso é alterada.**  
-
-**Essa URL deve ser copiada e salva em uma propriedade de ambiente do projeto chamada: AUTHORIZED_URL (veja próximo passo).**  
+**Todas as vezes que se instala ou atualiza o IW-Telemedicine-API, é criada uma nova URL BASE**  
+**No próximo passo e também na estapa 4, essa URL será usada.**  
 
 2. **criar uma propriedade de projeto chamada: AUTHORIZED_URL**  
 Clicar na opção configurações (Settings) localizada do lado esquerdo do IDE.
@@ -47,12 +52,38 @@ Essa propriedade será usada para validar a URL usada em todas as requisições 
 **È muito importante que essa propriedade seja corretamente valorada.**  
 *Sem essa propriedade corretamente valorada, o IW-Telemedicina-API rejeitará todas as chamadas.*
 
-3. **Fazer um test de chamada a API:**  
-fazer um teste de chamada a API do Iw-Telemedicina.
-use o seguinte commando linux:  
+3. **Fazer testes de chamadas da IW-Telemedicne-API:**  
+fazer 6 testes usando os comandos abaixo. Cada teste usa uma linguagem de progração distinta para fazer as chamadas.
+Os 2 comandos abaixo usam a linguagem Python  
 ```bash  
-curl -X POST -H "Content-Type: application/json" -d '{"action":"getVersion","requestUUID":"123e4567-e89b-12d3-a456-426614174000"}' URL_DO_IW-TELEMEDICINE-API
+python3 test-iw-telemedicine-api-call.py URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
 ```  
+Nesse comando deve-se substituir URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR pela URL BASE da instalação.
+A resposta deve ser algo como:  
+```json  
+
+```  
+```bash  
+python3 test-iw-telemedicine-api-call.py fakeURL
+```  
+Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de caracteres de tamnho 3 no mínimo. Ex: abc
+A resposta deve ser algo como:  
+```json  
+
+```  
+Os 2 comandos sequintes usam a linguagem java 8:  
+```bash  
+python3 test-iw-telemedicine-api-call.py URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
+```  
+Nesse comando deve-se substituir URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR pela URL BASE da instalação.
+A resposta deve ser algo como:  
+```json  
+
+```  
+```bash  
+python3 test-iw-telemedicine-api-call.py fakeURL
+```  
+Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de caracteres de tamnho 3 no mínimo. Ex: abc
 A resposta deve ser algo como:  
 ```json  
 
