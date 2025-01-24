@@ -73,7 +73,7 @@ A resposta deve ser algo como:
 ```  
 Os 2 comandos sequintes usam a linguagem java 8:  
 ```bash  
-python3 test-iw-telemedicine-api-call.py URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
+java -jar (WIP...) URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
 ```  
 Nesse comando deve-se substituir URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR pela URL BASE da instalação.
 A resposta deve ser algo como:  
@@ -81,7 +81,7 @@ A resposta deve ser algo como:
 
 ```  
 ```bash  
-python3 test-iw-telemedicine-api-call.py fakeURL
+java -jar (WIP...) fakeURL
 ```  
 Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de caracteres de tamnho 3 no mínimo. Ex: abc
 A resposta deve ser algo como:  
@@ -89,9 +89,25 @@ A resposta deve ser algo como:
 
 ```  
 
+Os 2 comandos sequintes usam a linguagem Golang 1.21:  
+```bash  
+test-iw-telemecine-api URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
+```  
+Nesse comando deve-se substituir *URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR* pela URL BASE da instalação.
+A resposta deve ser algo como:  
+```json  
 
+```  
+```bash  
+test-iw-telemecine-api fakeURL
+```  
+Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de caracteres de tamanho 3 no mínimo. Ex: abc
+A resposta deve ser algo como:  
+```json  
 
-**WIP - Edição desse Documento em progresso...**  
+```
+Esses testes são vitais para garantir que IW-Telemecine-API está acessivel a todos que sabem chamá-la de fato.
+Independente da tecnolgia usada na chamada.
 
 >Agora siga para a Etapa 4 da instalação do IW-Telemedicine-API:  
 [Etapa 4](installing-iw-telemedicine-in-clients-iwcare-config-lang-pt.md)
