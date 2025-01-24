@@ -50,10 +50,10 @@ cd googleAppScript-IW-Telemedicine-API_${TAG}
 
 Esta sequencia deve ser execurada uma linha de cada vez. Elas farão:  
 * Posicionamento do diretorio do projeto clonado como diretorio corrente.  
-* Obtenção a Tag mais recente do branch corrente (branch main)
+* Obtenção da Tag mais recente do branch corrente (branch main)
 * posiciona no diretorio pai
-* troca o nome do diretrio do projeto clonado, incluindo no nome do mesmo a tag como sufixo (adequação ao padrao de instalação)
-* reposiciona no diretorio filho (do projeto clonado).  
+* troca o nome do diretrio do projeto clonado, incluindo no nome do mesmo a tag como sufixo (adequação ao padrao da Iberwan de instalação)
+* reposiciona no diretorio filho (diretório do projeto clonado).  
 O nome final do diretório clonado ficaria: googleAppScript-IW-Telemedicine_API_v1.2.3 (assumindo que a ultima tag é v1.2.3)
 
 IMPORTANTE: todos os passos do procedimento possuem uma razão de ser e em especial, essa sequencia de comandos acima.  
@@ -68,7 +68,7 @@ tudo que antecede é rápida.
    ./_prepare-basic-ubuntu-env.sh
    ```
    Esse comando irá instalar uma serie de pacotes do Ubuntu 22.04 necessários à instalação da Iw-Telemedicine-API.
-   Sem eles a instalação não pode prosseguir.
+   Sem eles a instalação não pode prosseguir. Caso contrário, muitos dos comando subsequentes irão falhar.  
    
 5. **use o programa *clasp* (instalado no passo anterior) para fazer login no Google Workspace usando as credenciais do usuário criado com a finalidade de instalar o IW-Telemedicine-API.**  
 ```bash
@@ -83,9 +83,9 @@ Após autorizar, feche apenas a aba do Browser usada pelo login e continue os pa
 6. Habilitar o uso da Google-Appscript-API na conta do <nome_cliente>@iwsoftware.com.br do Google Workspace da Iberwan:
 Após o clasp login executado no passo anterior, o navegador chrome já deve estar logado corretamente na conta <nome_cliente>@iwsoftware.com.br  
 Para habilitar o uso da API do Google, acesse https://script.google.com/home/usersettings no navegador que está logado na respectiva conta e habilite colocando em ON o respectivo flag  
-Se vc habilitou agora o flag, espere uns poucos minutos para que essa habilitação seja propagada dentro do infra do Google.
+Se vc habilitou agora o flag, espere uns poucos minutos para que essa habilitação seja propagada dentro da infra do Google.
 Caso esse flag ainda não esteja habilitado ou mesmo não propagado, o comando seguinte retornará um erro, informando a necessidade dessa habilitação.
-nesse caso o comando clap create --type webapp deve ser repetido um tempo depois para que o projeto App Script possa ser criado de fato no Google workspace.
+Nesse caso o comando *clap create --type webapp* deve ser repetido um tempo depois para que o projeto App Script possa ser criado de fato no Google workspace.
   
 7. Use o comando *create* do *clasp* para criar um projeto do tipo Web App associado a conta do usuário logado:
 ```bash
@@ -101,15 +101,15 @@ Este comando usa uma série de infomações coletadas do ambiente que o usuário
 como:  
 Diretório corrente onde o comando foi dado que se tornará o nome do projeto dentro do Google Workspace do usuário.  
 Dados do usuário logado e suas respectivas credenciais de acesso ao Google Workspace.  
-Troca as extenções dos arguivos .js para .gs dentro do projeto no Google Workspace. Somente a extensão.
-Não sobe para o Google Workspace arquivos que não dizem respeito a Projetos Google App Script e que por ventura estejam presentes no diretório raiz do repo clonado
-E outros detalhes relacionados ao google App Scripts.  São muitos detalhes que o clasp faz automaticamente.
+Troca as extenções dos arguivos .js para .gs dentro do projeto no Google Workspace. Os arquivos locais .js não alterados. Continuarão com extensão .js. As extensões são alterados apenas dentro do Projeto no Google Workspace.  
+Não sobe para o Google Workspace arquivos e diretórios que não dizem respeito a *Projetos Google App Script* e que por ventura estejam presentes no diretório raiz do repo clonado  
+E outros detalhes relacionados a projetos google App Scripts.  São muitos os detalhes que o clasp faz automaticamente. Por isso ele é uma ferramenta essencial e que facilita intensamente a instalação como um todo.
 
-7. **Abrir no Navegador padrão o projeto que foi carregado no passo anterior já dentro do Google Work Space do usuário usado na instalação:**   
+7. **Abrir no Navegador padrão o projeto que foi carregado no passo anterior já dentro do Google Workspace do usuário usado na instalação:**   
 ```bash
 clasp open
 ```    
-A execução do comando acima abre o *IDE do Google App Script* no navegador e já devidamente posicionado no espaço do usuário infra@ e no Projeto que foi instalado.    
+A execução do comando acima abre o *IDE do Google App Script* no navegador e já devidamente posicionado no Projeto que foi carregado.    
 
 >Aqui termina a segunda etapa de instalação do IW-Telemedicina-API.  
 A partir daqui, o usuário pode continuar a instalação na [Etapa 3](./installing-iw-telemedicine-in-clients-gas-ide-lang-pt.md) que é executada na tela do Navegador que acaba de ser aberta.  
