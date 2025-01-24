@@ -32,7 +32,7 @@ Não é recomendado mostrar todas essas telas aqui no procedimento porque a apar
 O Google está sempre mexendo nessas telas. Segurança é uma questão levada muito a sério.  
 
 Ao final da implantação, aparecerá a tela abaixo:  
-![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-5-concluído.png)  
+![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-5-concluido.png)  
 
 Essa tela oferece a possibilidade de copiar a URL BASE de acesso à aplicação.  
 Essa URL é muito importante e deve ser guardada. Será usada em passos subsequentes.  
