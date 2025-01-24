@@ -2,8 +2,8 @@
 ## Instalação IW-Telemedicina-API  
   
 
->Essa etapa é executada integralmente no Aplicatico Iw-Care.  
-Por usuário que tenha acesso na configurações de parametros do Iw-Care.*(tela 151)*
+>Essa etapa é executada integralmente no Aplicatico Iw-Care,  
+por usuário que tenha acesso na configurações de parametros do Iw-Care.*(Tela 151)*
 
 1. **Acessar o IW-Care:**  
 Fazer Login no IW-Care com o usuário administrador.  
@@ -12,23 +12,23 @@ Fazer Login no IW-Care com o usuário administrador.
 
 3. **Procurar a propriedade: IW_TELEMEDICINE_API_URL**  
 Caso já exista, alterar o valor da propriedade para o valor da URL base do IW-Telemedicina-API, gerada na etapa anterior.  
-Caso não exista, adicionar a propriedade com o valor da URL do Iw-Telemedicina-API, gerada na etapa anterior.    
+Caso não exista, adicionar a propriedade e valore ela com o valor da URL gerada na etapa anterior.    
 
-4. salvar as propriedades. 
+4. Salvar as propriedades. 
 
-5. Fazer um teste de chamada a API do IW-Telemedicina.  
+5. Fazer um teste de chamada a API do IW-Telemedicina no Banco de treinamento ou de homologação
 Acessar as telas do IW-Care que permitem acesso ao Iw-Telemedicina-API.  
 A medida que novas versões do IW-Care são disponiblizadas i, novas telas serão criadas para acesso a telemedicina.
-Hoje as telas do Evoluções clínicas do Prontuário do IW-Care já oferecem acesso a essas funcionalidades.  
+Hoje as telas de Evoluções clínicas do Prontuário já oferecem esse acesso.  
 
-Posicione o Prontuário em um usuário de Testes (que não tenha impacto na produção) ou melhor, faça login um IW-Care numa base de treinamento ou de homologação caso existam.  
+Posicione o Prontuário em um usuário de Testes (que não tenha impacto na produção) ou melhor, faça login em uma base de treinamento ou de homologação caso existam.  
 É o melhor modo de fazer testes sem impactar a produção.  
 Crie Tele-consultas para o Paciente de testes.
 
-Em seguida acesse o calendário do Google Workspace do usuário infra respectivo.  
-Todas as tele-consultas criadas deverão aparecer no calendário do Google Workspace do usuário infra.  
-Na aplicação de Calendário do Google Workspace do respectivo usuário infra, deverá existir uma agenda para cada Médico que criou Tele-consultas.
-E dentro da Agenda desse médico, deverá existir uma Tele-consulta para cada Tele-consulta criada.  
+Em seguida acesse o calendário do Google Workspace do usuário <nome_cliente>@iwsoftware.com.br  
+Todas as tele-consultas criadas deverão aparecer no calendário do Google Workspace do usuário.  
+Na aplicação de Calendário do usuário, deverá existir uma agenda para cada Médico que criou Tele-consultas.
+E dentro da Agenda desses médicos, deverá existir um evento para cada Tele-consulta criada.  
 
 Esses testes são fundamentais para garantir que o IW-Telemedicina-API foi instalado corretamente está funcionando bem.  
 
@@ -38,7 +38,7 @@ Esses testes são fundamentais para garantir que o IW-Telemedicina-API foi insta
 Aqui termina a etapa 4 da instalação do Iw-Telemedicina-API. Que é a etapa final da instalação.  
 
 **IMPORTANTE:**  
->*Agora o diretório temporário de instalação deve ser excluído da máquina usada para instalar o IW-Telemedicine-API.  
+>*Agora o diretório temporário de instalação pode ser excluído.  
 Nele estão fontes e outros arquivos protegidos por direitos autorais.*  
 
 ---
