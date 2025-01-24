@@ -1,14 +1,18 @@
 # Etapa 2  
 ## Instalação IW-Telemedicine no Google Workspace da Iberwan
+É recomendavel usar Linux (Ubuntu 22.04) durante to a Etapa 2.  
+Diversos programas que serão instalados nessa etapa para completar o ambiente de instalação foram escritos pensando-se em Linux/Mac.
+Máquinas windows podem ser usadas, mas necessitam de pacotes/configurações adicionais.  
 
-
-1. **instalar os seguintes apps: git, nvm (node versions manager), NodeJS (latest 20), clasp (latest 2.4.2)**  
-Todos esses progranas podem ser instalados em qualquer Sistema Operacional (Windows, Linux, MacOS).  
-É recomendado usar Linux porque os apps de linha de comando como esses, normalmente foram escritos pensando-se em Linux.  
-Windows 10/11 oferece recurso de uso do Linux e Windows ao mesmo tempo (usando WLS2 - Windows Linux Subsystem).  
-Se você tem uma máquina Windows, primeiro ative o WLS2, e depois instale git, nvm, NodeJS, e clasp no Linux embarcado.
+> somente para máquinas Windows:
+> Windows 10/11 oferece recurso de uso do Linux e Windows ao mesmo tempo (usando WLS2 - Windows Linux Subsystem).  
+Se você tem uma máquina Windows, ative o WLS2 e instale da loja da Microsoft o Linux Ubuntu 22.04 
 Recomendamos usar o Linux Ubuntu 22.04 LTS embarcado no Windows 10/11. O Ubuntu 22.04 pode ser instalado baixando direto da Microsoft Store
-Escrevemos um script para Ubuntu 22.04 que instala/verifica a instalação de todos os apps listados acima alem de outros que são necessarios e não listados acima.
+
+1. **instalar o git:**
+     
+É recomendado usar Linux. git foi escrito pensando em maquinas linux e Mac.    
+
   
 
 3. **clonar o repositorio do Github (https://github.com/hrbsystems/googleAppScript-IW-Telemedicine-API):**  
@@ -53,26 +57,26 @@ Todas as versões do IW-Telemedicine_API devem obrigatoriamente serem instaladas
 Sem isso, devemos reiniciar do zero tudo. Faz parte da boa documentação da instalação. Embora possa parecer radical iniciar tudo do zero, a execução de
 tudo que antecede é muito rápida.  
   
-4. **Mude para o diretorio do repositorio clonado no passo anterior:**  
-   ```bash
-   cd googleAppScript-IW-Telemedicine-API_${TAG}
-   ```
-5. **Excute o script *_prepare-basic-ubuntu-env.sh* **   
+
+4. Excute o script *_prepare-basic-ubuntu-env.sh*     
    ```bash
    ./_prepare-basic-ubuntu-env.sh
-   ```   
-6. **use o programa *clasp* (instalado no passo 1) para fazer login no Google word Spaces usando as credenciais do usuário infra criado com a finalidade de instalar o IW-Telemedicine-API.**  
+   ```
+   Esse comando irá instalar uma serie de pacotes do Ubuntu 22.04 necessarios à instalação da Iw-Telemedicine-API.
+   Sem eles a instalação não pode prosseguir.
+   
+5. **use o programa *clasp* (instalado no passo 4 acima) para fazer login no Google Workspace usando as credenciais do usuário criado com a finalidade de instalar o IW-Telemedicine-API.**  
 ```bash
 clasp login  
 ```  
->Este comando deve ser executado no diretório do repositorio clonado. Deixe apenas 1 instância do Navegador Chrome aberta antes de executar clasp login.
-**MUITO CUIDADO:**A existencia de muitiplas instancias (janelas) do Nevegador Chrome pode criar confusão pois cada uma pode estar logada in um usuário distinto.**  
+>Este comando deve ser executado no diretório do repositorio clonado. Deixe apenas 1 instância do Navegador Chrome aberta antes de executar o clasp login.
+**MUITO CUIDADO:**A existência de multiplas instâncias (janelas) do Nevegador Chrome pode criar confusão. Cada uma pode estar logada in um usuário distinto no Google Workspace.**  
 Normalmente a execução do comando *clasp login* causa a abertura de uma aba no Navegador, mostrando a página *OAuth* de autorização pedindo autorização para várias coisas.  
-Todos os itens devem ser autorizados.  
+A conta <nome_cliente>@iwsoftware.com.br deve ser selecionada e TODOS os itens devem ser autorizados.  
 Após autorizar, feche apenas a aba do Browser usada pelo login e continue os passos seguintes usando o terminal.  
 
   
-5. Use o comando *create* do *clasp* para criar um projeto do tipo Web App associado a conta do usuário logado:
+6. Use o comando *create* do *clasp* para criar um projeto do tipo Web App associado a conta do usuário logado:
 **IMPORTANTE*: antes de dar esse comando é ncessario habilitar o uso da Google-AppScript-API na conta <nome-cliente>@iwsoftware.com.br no google workspace da Iberwan.
 Para fazer isso acesse https://script.google.com/home/usersettings no navegador que está logado na respectiva conta e habilite colocando em ON o respectivo flag
 se vc habilitou o flag recentemente, espere uns poucos minutos para que essa habilitação seja propagada dentro do infra do Google.
@@ -81,7 +85,7 @@ nesse caso o comando deve ser repetido um tempo depois para que o projeto App Sc
    
 ```bash
 clasp create --type webapp
-```  
+```
 
 6. **Use o comando *push* do *clasp* para carregar todos os scripts presentes no diretorio corrente no *Google Workspace* do usuário:**
 ```bash
