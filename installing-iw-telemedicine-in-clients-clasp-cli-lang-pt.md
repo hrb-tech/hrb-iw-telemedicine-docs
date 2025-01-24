@@ -4,11 +4,12 @@
 Diversos programas que serão instalados nessa etapa para completar o ambiente de instalação foram escritos pensando-se em Linux/Mac.
 Máquinas windows podem ser usadas, mas necessitam de pacotes/configurações adicionais.  
 
-> Somente para máquinas Windows:
+> Obs: *Somente para máquinas Windows:*
 Windows 10/11 oferece recurso de uso do Linux e Windows ao mesmo tempo (usando WLS2 - Windows Linux Subsystem).  
 Se você tem uma máquina Windows, ative o WLS2 e instale da loja da Microsoft o Linux Ubuntu 22.04
-Instale o navegador Chrome no windows. O navegador Edge que vem nativamente com o Windows irá acusar erros.
-Recomendamos usar o Linux Ubuntu 22.04 LTS embarcado no Windows 10/11. O Ubuntu 22.04 pode ser instalado baixando direto da Microsoft Store
+Instale também o navegador Chrome no windows. O navegador Edge que vem nativamente com o Windows irá acusar erros.
+Recomendamos usar o Linux Ubuntu 22.04 LTS embarcado no Windows 10/11. O Ubuntu 22.04 pode ser instalado baixando direto da Microsoft Store.
+Todos os comandos seguintes devem ser executados usando o terminal do Ubuntu 22.04 embarcado no Windows.
 
 1. **instalar o git:**
 ```bash
