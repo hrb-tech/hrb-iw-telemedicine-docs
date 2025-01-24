@@ -59,7 +59,7 @@ Os 2 comandos abaixo usam a linguagem Python
 ```bash  
 python3 test-iw-telemedicine-api-call.py URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
 ```  
-Nesse comando deve-se substituir URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR pela URL BASE da instalação.
+Nesse comando deve-se substituir URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR pela URL BASE da instalação.  
 A resposta deve ser algo como:  
 ```json  
 
@@ -67,7 +67,7 @@ A resposta deve ser algo como:
 ```bash  
 python3 test-iw-telemedicine-api-call.py fakeURL
 ```  
-Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de caracteres de tamnho 3 no mínimo. Ex: abc
+Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de caracteres de tamnho 3 no mínimo. Ex: abc  
 A resposta deve ser algo como:  
 ```json  
 
@@ -78,7 +78,7 @@ Os 2 comandos sequintes usam a linguagem *Java 8*:
 ```bash  
 java -jar (WIP...) URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
 ```  
-Nesse comando deve-se substituir URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR pela URL BASE da instalação.
+Nesse comando deve-se substituir URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR pela URL BASE da instalação.  
 A resposta deve ser algo como:  
 ```json  
 
@@ -86,7 +86,7 @@ A resposta deve ser algo como:
 ```bash  
 java -jar (WIP...) fakeURL
 ```  
-Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de caracteres de tamnho 3 no mínimo. Ex: abc
+Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de caracteres de tamnho 3 no mínimo. Ex: abc  
 A resposta deve ser algo como:  
 ```json  
 
@@ -97,7 +97,7 @@ Os 2 comandos sequintes usam a linguagem *Golang 1.21*:
 ```bash  
 test-iw-telemecine-api URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
 ```  
-Nesse comando deve-se substituir *URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR* pela URL BASE da instalação.
+Nesse comando deve-se substituir *URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR* pela URL BASE da instalação.  
 A resposta deve ser algo como:  
 ```json  
 
@@ -105,7 +105,7 @@ A resposta deve ser algo como:
 ```bash  
 test-iw-telemecine-api fakeURL
 ```  
-Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de caracteres de tamanho 3 no mínimo. Ex: abc
+Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de caracteres de tamanho 3 no mínimo. Ex: abc  
 A resposta deve ser algo como:  
 ```json  
 
