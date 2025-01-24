@@ -15,7 +15,7 @@ possuem uma série de implicações legais e de segurança que devem ser entendi
 1. Pre-Instalação: Prepara a instalação do *projeto IW-TELEMEDICINE-API* no Google Workspaces da Iberwan:  
    [Detalhes aqui](installing-iw-telemedicine-in-clients-pre-install-lang-pt.md)
 
-2. Parte da instalação que deve ser executada via Aplicatico *Clasp* de linha de comando:  
+2. Parte da instalação que deve ser executada via Aplicativo *Clasp* de linha de comando:  
    [Detalhes aqui](installing-iw-telemedicine-in-clients-clasp-cli-lang-pt.md)   
   
 3. Parte da instalação que deve ser executada no Navegador, dentro do *IDE de App Scripts do Google* (Navegador Google Chrome de preferência):  
