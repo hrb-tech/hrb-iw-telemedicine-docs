@@ -36,84 +36,66 @@ Ao final da implantação, aparecerá a tela abaixo:
 
 Essa tela oferece a possibilidade de copiar a URL BASE de acesso à aplicação.  
 Essa URL é muito importante e deve ser guardada. Será usada em passos subsequentes.  
-Não se preocupe caso não tenha salvo essa URL. O IDE do Google App Scripts oferece recursos de consultar esse dado sempre que se desejar.   
+Não se preocupe caso não tenha salvo essa URL BASE. O IDE do Google App Scripts oferece recursos de consultar esse dado sempre que se desejar.   
   
 **IMPORTANTE:**   
 **Todas as vezes que se instala ou atualiza o IW-Telemedicine-API, é criada uma nova URL BASE**  
-**No próximo passo e também na estapa 4, essa URL será usada.**  
 
 2. **criar uma propriedade de projeto chamada: AUTHORIZED_URL**  
-Clicar na opção configurações (Settings) localizada do lado esquerdo do IDE.
+Para tal, clicar na opção configurações (Settings) localizada do lado esquerdo do IDE.
 Rolar a tela (para baixo) até encontrar a opção: *script properties (propriedades do script)*
-Adicionar uma nova propriedade chamada: AUTHORIZED_URL e atribuir o valor da URL BASE da instalação.  
+Adicionar uma nova propriedade chamada: AUTHORIZED_URL e atribuir um valor aleatório qualquer inicialmente, ex: abdefg    
 Prestar muita atenção na digitação do nome da propriedade, com todas as letras maiúsculas.
 
 Essa propriedade será usada para validar a URL usada em todas as requisições HTTP para esta instância do IW-Telemedicina-API que acaba de ser instalada.  
 **È muito importante que essa propriedade seja corretamente valorada.**  
 *Sem essa propriedade corretamente valorada, o IW-Telemedicina-API rejeitará todas as chamadas.*
 
-3. **Fazer testes de chamadas da IW-Telemedicne-API:**  
-Fazer 6 testes usando os comandos abaixo. Cada teste usa uma linguagem de progração distinta para fazer as chamadas.
----  
-Os 2 comandos abaixo usam a linguagem Python  
+3. **Fazer testes de chamadas da IW-Telemedicne-API inicialmente sem valor o correto (URL BASE) na propriedade AUTHORIZED_URL:**  
+Fazer 4 testes usando os comandos abaixo.  
+Cada teste usa uma linguagem de progração distinta para fazer as chamadas.
+Garantem independência tecnológica dos serviços de telemedicina e o funcionamento da proteção de aceite apenas de chamadas que usam
+a URL BASE certa de chamada.
+Nesses testes a seguir o IW-Telemedicine-API rejeitará as chamadas, uma vez que a propriedade AUTHORIZED_URL foi inicialmente valorada com valor aleatório e portanto incorreto.  
+**Esses testes são vitais para garantir que IW-Telemecine-API está acessivel a todos que sabem chamá-la de fato. E independente da tecnologia usada na chamada.**  
+   
+Linguagem Python:  
 ```bash  
-python3 test-iw-telemedicine-api-call.py URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
+python3 test-iw-telemedicine-api-call.py URL_BASE_CORRETA
 ```  
-Nesse comando deve-se substituir URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR pela URL BASE da instalação.  
-A resposta deve ser algo como:  
-```json  
-
-```  
-```bash  
-python3 test-iw-telemedicine-api-call.py fakeURL
-```  
-Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de caracteres de tamnho 3 no mínimo. Ex: abc  
-A resposta deve ser algo como:  
-```json  
-
-```
----  
-
-Os 2 comandos sequintes usam a linguagem *Java 8*:  
-```bash  
-java -jar (WIP...) URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
-```  
-Nesse comando deve-se substituir URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR pela URL BASE da instalação.  
-A resposta deve ser algo como:  
-```json  
-
-```  
-```bash  
-java -jar (WIP...) fakeURL
-```  
-Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de caracteres de tamnho 3 no mínimo. Ex: abc  
-A resposta deve ser algo como:  
-```json  
-
-```  
----  
-
-Os 2 comandos sequintes usam a linguagem *Golang 1.21*:  
-```bash  
-test-iw-telemecine-api URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR
-```  
-Nesse comando deve-se substituir *URL_DO_IW-TELEMEDICINE-API-SALVA-PASSO-ANTERIOR* pela URL BASE da instalação.  
-A resposta deve ser algo como:  
-```json  
-
-```  
-```bash  
-test-iw-telemecine-api fakeURL
-```  
-Nesse comando deve-se substituir a palavra *fakeURL* por qualquer sequência de caracteres de tamanho 3 no mínimo. Ex: abc  
-A resposta deve ser algo como:  
+Nesse comando deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
+A resposta deve ser:  
 ```json  
 
 ```
 
-**Esses testes são vitais para garantir que IW-Telemecine-API está acessivel a todos que sabem chamá-la de fato.
-Independente da tecnologia usada na chamada.**  
+---  
 
->Agora siga para a Etapa 4 da instalação do IW-Telemedicine-API:  
-[Etapa 4](installing-iw-telemedicine-in-clients-iwcare-config-lang-pt.md)
+Linguagem Node versão 20 (JavaScript):  
+```bash  
+node (WIP...) URL_BASE-CORRETA
+```  
+Nesse comando deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
+**A resposta deve ser a mesma da chamda feita em Python.**  
+
+---  
+
+Linguagem Java 8:  
+```bash  
+java (WIP...) URL_BASE-CORRETA
+```  
+Nesse comando deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.    
+**A resposta deve ser a mesma da chamda feita em Python.**  
+
+---  
+
+Linguagem *Golang 1.21*:  
+```bash  
+test-iw-telemecine-api URL_BASE_CORRETA
+```  
+Nesse comando deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
+**A resposta deve ser a mesma da chamda feita em Python.**  
+
+
+Agora siga para a Etapa 4: [Etapa 4](installing-iw-telemedicine-in-clients-iwcare-config-lang-pt.md)  
 
