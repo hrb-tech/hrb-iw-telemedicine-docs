@@ -58,7 +58,7 @@ Nesses testes o IW-Telemedicine-API rejeitará as chamadas, uma vez que a propri
 **Esses testes são vitais para garantir que API está acessivel somente aos que sabem chamá-la de fato. E independente da tecnologia usada na chamada.**  
 A sequir os comandos que devem ser usados nesses testes.  
 
-**Linguagem Python:**  
+**Linguagem Python 3.10:**  
 ```bash  
 python3 test-iw-telemedicine-api-call.py URL_BASE_CORRETA
 ```  
@@ -95,6 +95,58 @@ test-iw-telemecine-api URL_BASE_CORRETA
 ```  
 >Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
 **A resposta deve ser a mesma da chamda feita em Python.**  
+
+
+## 4. Fazer TESTES de chamadas da API:  
+### Agora com o valor correto da URL BASE na propriedade AUTHORIZED_URL  
+
+>Agora vamos acessar a Propriedade AUTHORIZED_URL via IDE do mesmo modo que fizemos no momento da criação dela no passo 2.
+Só que agora devemos valorar corretamente a propriedade. URL BASE Obtido no final do passo 1.
+** Importante valorar essa propriedade com o valor exato. Trata-se de valor com muitos caracteres. Evite digitação. Use copiar e colar.**  
+
+repetir os mesmos comandos usados no passo 3.  
+Agora, nesses testes o IW-Telemedicine-API aceitará as chamadas, uma vez que a propriedade AUTHORIZED_URL agora está com o valor correto.  
+
+A sequir os comandos que devem ser usados nesses testes.  
+
+**Linguagem Python 3.10:**  
+```bash  
+python3 test-iw-telemedicine-api-call.py URL_BASE_CORRETA
+```  
+>Nesse comando deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
+
+A resposta deve ser:  
+```json  
+
+```
+
+---  
+
+**Linguagem Node versão 20 (JavaScript):**  
+```bash  
+node (WIP...) URL_BASE-CORRETA
+```  
+>Nesse comando, também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
+**A resposta deve ser a mesma da chamda feita em Python.**  
+
+---  
+
+**Linguagem Java 8:**  
+```bash  
+java (WIP...) URL_BASE-CORRETA
+```  
+>Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
+**A resposta deve ser a mesma da chamda feita em Python.**  
+
+---  
+
+**Linguagem Golang 1.21:**  
+```bash  
+test-iw-telemecine-api URL_BASE_CORRETA
+```  
+>Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
+**A resposta deve ser a mesma da chamda feita em Python.**  
+
 
 
 Agora siga para a Etapa 4: [Etapa 4](installing-iw-telemedicine-in-clients-iwcare-config-lang-pt.md)  
