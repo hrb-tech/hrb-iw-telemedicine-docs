@@ -46,12 +46,14 @@ Adicionar uma nova propriedade chamada: AUTHORIZED_URL e atribuir inicialmente u
 Essa propriedade será usada para validar a URL usada em todas as requisições HTTP para esta instância que acaba de ser instalada.  
 Para efeito de TESTES ela foi inicializada com valor incorreto de propósito.
 
-## 3. Fazer TESTES de chamadas da API, inicialmente sem valor o correto (URL BASE) na propriedade AUTHORIZED_URL:  
+## 3. Fazer TESTES de chamadas da API:  
+### inicialmente sem valor correto da URL BASE na propriedade AUTHORIZED_URL  
+
 Fazer 4 testes usando os comandos abaixo.  
-Cada teste usa uma linguagem de progração distinta para fazer as chamadas.
-Garantem independência tecnológica dos serviços de telemedicina e o funcionamento da proteção de aceite apenas de chamadas que usam
-a URL BASE certa de chamada.
-Nesses testes a seguir o IW-Telemedicine-API rejeitará as chamadas, uma vez que a propriedade AUTHORIZED_URL foi inicialmente valorada com valor aleatório e portanto incorreto.  
+Cada teste usa uma linguagem de programação distinta para fazer as chamadas.  
+Garantem independência tecnológica dos serviços de telemedicina e também o funcionamento da proteção de aceite apenas de chamadas que usam
+a URL BASE certa.
+Nesses testes o IW-Telemedicine-API rejeitará as chamadas, uma vez que a propriedade AUTHORIZED_URL foi inicialmente valorada com valor aleatório e portanto incorreto.  
 **Esses testes são vitais para garantir que API está acessivel somente aos que sabem chamá-la de fato. E independente da tecnologia usada na chamada.**  
 A sequir os comandos que devem ser usados nesses testes.  
 
