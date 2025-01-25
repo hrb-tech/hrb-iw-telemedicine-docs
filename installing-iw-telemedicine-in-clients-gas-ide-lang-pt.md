@@ -127,7 +127,7 @@ A resposta deve ser:
 node (WIP...) URL_BASE-CORRETA
 ```  
 >Nesse comando, também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
-**A resposta deve ser a mesma da chamda feita em Python.**  
+**A resposta deve ser a mesma da chamada em Python.**  
 
 ---  
 
@@ -136,7 +136,7 @@ node (WIP...) URL_BASE-CORRETA
 java (WIP...) URL_BASE-CORRETA
 ```  
 >Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
-**A resposta deve ser a mesma da chamda feita em Python.**  
+**A resposta deve ser a mesma da chamada em Python.**  
 
 ---  
 
@@ -145,7 +145,7 @@ java (WIP...) URL_BASE-CORRETA
 test-iw-telemecine-api URL_BASE_CORRETA
 ```  
 >Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
-**A resposta deve ser a mesma da chamda feita em Python.**  
+**A resposta deve ser a mesma da chamada em Python.**  
 
 
 
