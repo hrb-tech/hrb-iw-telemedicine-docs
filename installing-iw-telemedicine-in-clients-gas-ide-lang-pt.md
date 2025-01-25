@@ -39,26 +39,28 @@ Não se preocupe caso não tenha salvo essa URL BASE. O IDE do Google App Script
 **IMPORTANTE:**   
 **Todas as vezes que se instala ou atualiza o IW-Telemedicine-API, é criada uma nova URL BASE**  
 
-## 2. **criar uma propriedade de projeto chamada: AUTHORIZED_URL**  
+## 2. Criar uma propriedade de projeto chamada: *AUTHORIZED_URL*  
 Para tal, clicar na opção configurações (Settings) localizada do lado esquerdo do IDE.
 Rolar a tela (para baixo) até encontrar a opção: *script properties (propriedades do script)*
-Adicionar uma nova propriedade chamada: AUTHORIZED_URL e atribuir um valor aleatório qualquer inicialmente, ex: abdefg    
-Essa propriedade será usada para validar a URL usada em todas as requisições HTTP para esta instância do IW-Telemedicina-API que acaba de ser instalada.  
-Para efeito de testes ela foi incializada com valor incorreto de propósito.
+Adicionar uma nova propriedade chamada: AUTHORIZED_URL e atribuir inicialmente um valor aleatório qualquer. Ex: abdefg  
+Essa propriedade será usada para validar a URL usada em todas as requisições HTTP para esta instância que acaba de ser instalada.  
+Para efeito de TESTES ela foi inicializada com valor incorreto de propósito.
 
-3. **Fazer testes de chamadas da IW-Telemedicne-API inicialmente sem valor o correto (URL BASE) na propriedade AUTHORIZED_URL:**  
+## 3. Fazer TESTES de chamadas da API, inicialmente sem valor o correto (URL BASE) na propriedade AUTHORIZED_URL:  
 Fazer 4 testes usando os comandos abaixo.  
 Cada teste usa uma linguagem de progração distinta para fazer as chamadas.
 Garantem independência tecnológica dos serviços de telemedicina e o funcionamento da proteção de aceite apenas de chamadas que usam
 a URL BASE certa de chamada.
 Nesses testes a seguir o IW-Telemedicine-API rejeitará as chamadas, uma vez que a propriedade AUTHORIZED_URL foi inicialmente valorada com valor aleatório e portanto incorreto.  
-**Esses testes são vitais para garantir que IW-Telemecine-API está acessivel a todos que sabem chamá-la de fato. E independente da tecnologia usada na chamada.**  
-   
-Linguagem Python:  
+**Esses testes são vitais para garantir que API está acessivel somente aos que sabem chamá-la de fato. E independente da tecnologia usada na chamada.**  
+A sequir os comandos que devem ser usados nesses testes.  
+
+**Linguagem Python:**  
 ```bash  
 python3 test-iw-telemedicine-api-call.py URL_BASE_CORRETA
 ```  
-Nesse comando deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
+>Nesse comando deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
+
 A resposta deve ser:  
 ```json  
 
@@ -66,29 +68,29 @@ A resposta deve ser:
 
 ---  
 
-Linguagem Node versão 20 (JavaScript):  
+**Linguagem Node versão 20 (JavaScript):**  
 ```bash  
 node (WIP...) URL_BASE-CORRETA
 ```  
-Nesse comando, também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
+>Nesse comando, também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
 **A resposta deve ser a mesma da chamda feita em Python.**  
 
 ---  
 
-Linguagem Java 8:  
+**Linguagem Java 8:**  
 ```bash  
 java (WIP...) URL_BASE-CORRETA
 ```  
-Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.    
+>Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
 **A resposta deve ser a mesma da chamda feita em Python.**  
 
 ---  
 
-Linguagem *Golang 1.21*:  
+**Linguagem Golang 1.21:**  
 ```bash  
 test-iw-telemecine-api URL_BASE_CORRETA
 ```  
-Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
+>Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
 **A resposta deve ser a mesma da chamda feita em Python.**  
 
 
