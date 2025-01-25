@@ -72,7 +72,8 @@ A resposta deve ser:
 ---  
 
 **Linguagem Java 8:**  
-```bash  
+```bash
+java -cp ".:gson-2.11.0.jar" testIwTelemedicineApiCall "YOUR_WEB_APP_URL" 
 java (WIP...) URL_BASE-CORRETA
 ```  
 >Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
