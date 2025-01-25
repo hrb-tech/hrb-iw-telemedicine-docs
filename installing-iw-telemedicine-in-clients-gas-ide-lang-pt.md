@@ -26,8 +26,9 @@ Na sequencia aparecerá a tela abaixo:
 ![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-3-autorizar-acesso.png)  
 Clique no botão azul *Autorizar Acesso*.
 Agora, uma série de telas associadas ao processo de autorização irão se suceder.
-Não é recomendado mostrar todas essas telas aqui no procedimento porque a aparência delas mudam com frequência.
+Não vamos mostrar aqui todas essas telas de autorização porque a aparência delas muda com frequência.
 O Google está sempre mexendo nessas telas. Segurança é uma questão levada muito a sério.  
+**O importante é autorizar tudo o que for perguntado.**  
 
 Ao final da implantação, aparecerá a tela abaixo:  
 ![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-5-concluido.png)  
