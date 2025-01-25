@@ -1,7 +1,6 @@
 # Etapa 3  
 ## Instalação IW-Telemedicina-API
   
-
 Executada usando o IDE do Google para App Scripts que funciona direto do Navegador (Google Chrome de preferência)  
 *Esses passos devem ser executados pelo cliente, com suporte de um consultor da Iberwan se o cliente assim o desejar.*
   
@@ -13,8 +12,7 @@ para a instância do IW-Telemedicina instalada no cliente
 
 Seguem os passos:  
 
-
-1. **implantar o projeto:**  
+## 1. **implantar o projeto:**  
 Ao executar o ultimo passo da etapa anterior estaremos com o Navegador aberto no projeto do IW-Telemedicine-API que acaba de ser carregado.  
 Clicar no botão azul *implantar (deploy)* localizado no topo do IDE e selecione a opção *gerenciar implantações (manage deployments)*:  
 ![manage deployments dialog](./Screenshot-gas-gerenciar-implantacao-0.png)  
@@ -41,15 +39,12 @@ Não se preocupe caso não tenha salvo essa URL BASE. O IDE do Google App Script
 **IMPORTANTE:**   
 **Todas as vezes que se instala ou atualiza o IW-Telemedicine-API, é criada uma nova URL BASE**  
 
-2. **criar uma propriedade de projeto chamada: AUTHORIZED_URL**  
+## 2. **criar uma propriedade de projeto chamada: AUTHORIZED_URL**  
 Para tal, clicar na opção configurações (Settings) localizada do lado esquerdo do IDE.
 Rolar a tela (para baixo) até encontrar a opção: *script properties (propriedades do script)*
 Adicionar uma nova propriedade chamada: AUTHORIZED_URL e atribuir um valor aleatório qualquer inicialmente, ex: abdefg    
-Prestar muita atenção na digitação do nome da propriedade, com todas as letras maiúsculas.
-
 Essa propriedade será usada para validar a URL usada em todas as requisições HTTP para esta instância do IW-Telemedicina-API que acaba de ser instalada.  
-**È muito importante que essa propriedade seja corretamente valorada.**  
-*Sem essa propriedade corretamente valorada, o IW-Telemedicina-API rejeitará todas as chamadas.*
+Para efeito de testes ela foi incializada com valor incorreto de propósito.
 
 3. **Fazer testes de chamadas da IW-Telemedicne-API inicialmente sem valor o correto (URL BASE) na propriedade AUTHORIZED_URL:**  
 Fazer 4 testes usando os comandos abaixo.  
@@ -75,7 +70,7 @@ Linguagem Node versão 20 (JavaScript):
 ```bash  
 node (WIP...) URL_BASE-CORRETA
 ```  
-Nesse comando deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
+Nesse comando, também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
 **A resposta deve ser a mesma da chamda feita em Python.**  
 
 ---  
@@ -84,7 +79,7 @@ Linguagem Java 8:
 ```bash  
 java (WIP...) URL_BASE-CORRETA
 ```  
-Nesse comando deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.    
+Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.    
 **A resposta deve ser a mesma da chamda feita em Python.**  
 
 ---  
@@ -93,7 +88,7 @@ Linguagem *Golang 1.21*:
 ```bash  
 test-iw-telemecine-api URL_BASE_CORRETA
 ```  
-Nesse comando deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
+Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
 **A resposta deve ser a mesma da chamda feita em Python.**  
 
 
