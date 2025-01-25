@@ -73,8 +73,7 @@ A resposta deve ser:
 
 **Linguagem Java 8:**  
 ```bash
-java -cp ".:gson-2.11.0.jar" testIwTelemedicineApiCall "YOUR_WEB_APP_URL" 
-java (WIP...) URL_BASE-CORRETA
+java -cp ".:gson-2.11.0.jar" testIwTelemedicineApiCall URL_BASE_CORRETA 
 ```  
 >Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
 **A resposta deve ser a mesma da chamda feita em Python.**  
@@ -89,15 +88,15 @@ test-iw-telemecine-api URL_BASE_CORRETA
 **A resposta deve ser a mesma da chamda feita em Python.**  
 
 
-## 4. Fazer TESTES de chamadas da API:  
+## 4. Fazer novos TESTES de chamadas da API:  
 ### Agora com o valor correto da URL BASE na propriedade AUTHORIZED_URL  
 
->Agora vamos acessar a Propriedade AUTHORIZED_URL via IDE do mesmo modo que fizemos no momento da criação dela no passo 2.
+>Antes de executar os comandos,agora vamos acessar a Propriedade AUTHORIZED_URL via IDE (do mesmo modo que fizemos no momento da criação dela no passo 2).
 Vamos valorar corretamente a propriedade com a URL BASE Obtida no final do passo 1.
-** Importante valorar essa propriedade com o valor exato. Trata-se de valor com muitos caracteres. Evite digitação. Use copiar e colar.**  
+** Importante: valorar essa propriedade com o valor exato. Trata-se de valor com muitos caracteres. Evite digitação. Use copiar e colar.**  
 
 repetir os mesmos comandos usados no passo 3.  
-Agora, nesses testes o IW-Telemedicine-API aceitará as chamadas, uma vez que a propriedade AUTHORIZED_URL agora está com o valor correto.  
+Agora, nesses testes o IW-Telemedicine-API aceitará as chamadas, uma vez que a propriedade AUTHORIZED_URL nesse momento está com o valor correto.  
 
 A sequir os comandos que devem ser usados nesses testes.  
 
@@ -115,8 +114,8 @@ A resposta deve ser:
 ---  
 
 **Linguagem Java 8:**  
-```bash  
-java (WIP...) URL_BASE-CORRETA
+```bash
+java -cp ".:gson-2.11.0.jar" testIwTelemedicineApiCall URL_BASE_CORRETA 
 ```  
 >Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
 **A resposta deve ser a mesma da chamada em Python.**  
