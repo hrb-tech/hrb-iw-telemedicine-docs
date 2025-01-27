@@ -68,7 +68,10 @@ python3 test-iw-telemedicine-api-call.py URL_BASE_CORRETA
 
 A resposta deve ser:  
 ```json  
-
+{
+    "responseCode": -1,
+    "errorMessage": "invalid URL used in request"
+}
 ```
 
 ---  
