@@ -19,10 +19,10 @@ possuem uma série de implicações legais e de segurança que devem ser entendi
    [Detalhes aqui](installing-iw-telemedicine-in-clients-clasp-cli-lang-pt.md)   
   
 3. Parte da instalação que deve ser executada no Navegador, dentro do *IDE de App Scripts do Google* (Navegador Google Chrome de preferência):  
-   [Details here](installing-iw-telemedicine-in-clients-gas-ide-lang-pt.md)
+   [Detalhes here](installing-iw-telemedicine-in-clients-gas-ide-lang-pt.md)
 
 4. Parte da instalação que deve ser executada na aplicação *client java do IwCare*:  
-   [Details here](installing-iw-telemedicine-in-clients-iwcare-config-lang-pt.md)  
+   [Detalhes here](installing-iw-telemedicine-in-clients-iwcare-config-lang-pt.md)  
 
 
 
