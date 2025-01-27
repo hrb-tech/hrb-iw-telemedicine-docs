@@ -1,33 +1,37 @@
 # Etapa 4  
 ## Instalação IW-Telemedicina-API  
-  
+## COnfiguração final e testes de Integração
 
 >Essa etapa é executada integralmente no Aplicatico Iw-Care,  
-por usuário que tenha acesso na configurações de parametros do Iw-Care.*(Tela 151)*
+por usuário que tenha acesso a configurações de parametros do Iw-Care.*(Tela 151)*
 
-1. **Acessar o IW-Care:**  
-Fazer Login no IW-Care com o usuário administrador.  
+1. **Acessar o IW-Care:**
 
-2. **Acessar a tela 151:**  
+> *Prefernciacialmente acessando um banco de treinamento ou de homologação. Na ausência desses bancos pode-se o banco de produção sem problemas
+> uma vez que por arquitetura da telemedicina o IWCare é apenas uma app cliente da API de telemedicina que está em outro ambiente muito diferente (nuvem do Google).  
 
-3. **Procurar a propriedade: GLB_TELEMEDICINE_URL**  
-Caso já exista, alterar o valor da propriedade para o valor da URL BASE do IW-Telemedicina-API, gerada na etapa anterior.  
-Caso essa peopriedade ainda não exista no IW, adicionar a propriedade e valore ela com o valor da URL gerada na etapa anterior.    
+Fazer Login no IW-Care com o usuário administrador e que a nivel de IW seja considerado um médico com acesso ao prontuário.
 
-4. Salvar as propriedades. 
 
-5. Fazer um teste de chamada a API do IW-Telemedicina no Banco de treinamento ou de homologação
-Acessar as telas do IW-Care que permitem acesso ao Iw-Telemedicina-API.  
-A medida que novas versões do IW-Care são disponiblizadas, novas telas serão criadas para acesso a telemedicina.
-Hoje as telas de Evoluções clínicas do Prontuário já oferecem esse acesso.  
+3. **Acessar a tela 151:**  
 
-Posicione o Prontuário em um usuário de Testes (que não tenha impacto na produção) ou melhor, suba o IWCare fazendo login em uma base de treinamento ou de homologação caso existam.  
-É o melhor modo de fazer testes sem impactar a produção.  
-Crie Tele-consultas para o Paciente de testes.
+4. **Procurar a propriedade: GLB_TELEMEDICINE_URL**  
+Caso já exista, altere o valor da propriedade para o valor da URL BASE do IW-Telemedicina-API, gerada na etapa anterior - passo 1.  
+Caso essa propriedade ainda não exista no IW, adicione a propriedade e valore a mesma adequadamente.    
+E Salve as propriedades.
+
+7. **Fazer varios testes de video-chamandas
+Acessar as telas do IW-Care que permitem acesso à Iw-Telemedicina-API.  
+A medida que novas versões do IW-Care são disponibizadas, novas telas serão criadas para acesso a telemedicina.
+Hoje apenas as telas de Evoluções clínicas do Prontuário já oferecem esse acesso.  
+Simule a criação de varias teleconsultas bem como a realização das mesmas.
+Caso não saiba como usar essas telas, consulte o manual do IWCare.  
+
+Posicione o Prontuário em um paciente de testes (normalemnte os bancos nos clientes da Iberwan possuem um paciente para propósito de testes).
+Crie Tele-consulta para o Paciente de testes. As consultas serão criadas para o médico (usuário que logou no IW)
 
 Em seguida acesse o calendário do Google Workspace do usuário <nome_cliente>@iwsoftware.com.br  
-Todas as tele-consultas criadas deverão aparecer no calendário do Google Workspace do usuário.  
-Na aplicação de Calendário do usuário, deverá existir uma agenda para cada Médico para o qual criou-se Tele-consultas.
+No Google Workspace, aplicação de Calendário da conta <nome_cliente>iwsoftware.com.br, deverá existir uma agenda para cada médico para o qual criou-se Tele-consultas.
 E dentro da Agenda desses médicos, deverá existir um evento para cada Tele-consulta criada.  
 
 Esses testes são fundamentais para garantir que o IW-Telemedicina-API foi instalada corretamente está funcionando bem.e o IwCare está cnseguindo acessá-la.  
