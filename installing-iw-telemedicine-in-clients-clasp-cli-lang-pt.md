@@ -97,14 +97,18 @@ clasp create --type webapp
 ```bash
 clasp push
 ```  
->Obs:  
-Este comando usa uma série de infomações coletadas do ambiente que o usuário executou o comando.
-como:  
-Diretório corrente onde o comando foi dado que se tornará o nome do projeto dentro do Google Workspace do usuário.  
-Dados do usuário logado e suas respectivas credenciais de acesso ao Google Workspace.  
-Troca as extenções dos arguivos .js para .gs dentro do projeto no Google Workspace. Os arquivos locais .js não alterados. Continuarão com extensão .js. As extensões são alterados apenas dentro do Projeto no Google Workspace.  
-Não sobe para o Google Workspace arquivos e diretórios que não dizem respeito a *Projetos Google App Script* e que por ventura estejam presentes no diretório raiz do repo clonado  
-E outros detalhes relacionados a projetos google App Scripts.  São muitos os detalhes que o clasp faz automaticamente. Por isso ele é uma ferramenta essencial e que facilita intensamente a instalação como um todo.
+>Obs:
+>Este comnado irá apresentar uma pergunatq:  
+*? Manifest file has been updated. Do you want to push and overwrite? (y/N)* 
+Responda y (basta teclar y)
+ 
+Na sequeni uma série de infomações são coletadas do seu ambiente e do local onde o comando *push* foi executado,
+e são usadas para automizar uma série de coisas, como:   
+Diretório corrente onde o comando foi dado se tornará o nome do projeto dentro do Google Workspace do usuário.  
+Dados do usuário logado e suas respectivas credenciais de acesso ao Google Workspace são levadas para o IDE.  
+Troca automática das extenções dos arguivos .js locais para .gs dentro do projeto no Google Workspace. Os arquivos locais .js não são alterados e localmente continuarão com extensão .js. As extensões são alteradas apenas dentro do Projeto no IDE do Google Workspace.  
+Não sobe para o Projeto no Google Workspace, arquivos e diretórios que não dizem respeito a *Projetos Google App Script* e que por ventura estejam presentes no diretório raiz do repo clonado.    
+E uma série de outros detalhes relacionados a projetos google App Scripts.  São muitos os detalhes que o clasp faz automaticamente. Por isso ele é uma ferramenta essencial.
 
 7. **Abrir no Navegador padrão o projeto que foi carregado no passo anterior já dentro do Google Workspace do usuário usado na instalação:**   
 ```bash
