@@ -1,14 +1,12 @@
-# Etapa 4  
-## Instalação IW-Telemedicina-API  
-## COnfiguração final e testes de Integração
+# Instalação IW-Telemedicina-API - Etapa 4:  
+## Configuração final e testes de integração
 
->Essa etapa é executada integralmente no Aplicatico Iw-Care,  
-por usuário que tenha acesso a configurações de parametros do Iw-Care.*(Tela 151)*
+>Essa etapa usa o Aplicatico Iw-Care e o Navegador 
 
 1. **Acessar o IW-Care:**
 
-> *Prefernciacialmente acessando um banco de treinamento ou de homologação. Na ausência desses bancos pode-se o banco de produção sem problemas
-> uma vez que por arquitetura da telemedicina o IWCare é apenas uma app cliente da API de telemedicina que está em outro ambiente muito diferente (nuvem do Google).  
+> Escolha um banco qualquer do cliente para fazer as configurações e testes presentes nessa etapa.
+> *Prefernciacialmente* use um banco de treinamento ou de homologação.
 
 Fazer Login no IW-Care com o usuário administrador e que a nivel de IW seja considerado um médico com acesso ao prontuário.
 
@@ -20,32 +18,37 @@ Caso já exista, altere o valor da propriedade para o valor da URL BASE do IW-Te
 Caso essa propriedade ainda não exista no IW, adicione a propriedade e valore a mesma adequadamente.    
 E Salve as propriedades.
 
-7. **Fazer varios testes de video-chamandas
-Acessar as telas do IW-Care que permitem acesso à Iw-Telemedicina-API.  
-A medida que novas versões do IW-Care são disponibizadas, novas telas serão criadas para acesso a telemedicina.
-Hoje apenas as telas de Evoluções clínicas do Prontuário já oferecem esse acesso.  
-Simule a criação de varias teleconsultas bem como a realização das mesmas.
-Caso não saiba como usar essas telas, consulte o manual do IWCare.  
+7. **Fazer vários testes de video-chamandas
+Acessar as telas do IW-Care que permitem criar e acessar Teleconsultas.  
+A medida que novas versões do IW-Care são disponibizadas, novas telas serão criadas para acesso da telemedicina.
+Hoje apenas as telas de Evoluções clínicas do Prontuário já oferecem esse acesso.
 
-Posicione o Prontuário em um paciente de testes (normalemnte os bancos nos clientes da Iberwan possuem um paciente para propósito de testes).
-Crie Tele-consulta para o Paciente de testes. As consultas serão criadas para o médico (usuário que logou no IW)
+Simule a criação de varias teleconsultas bem como a realização das mesmas.
+Caso não saiba como usar as funcionalidades de teleconsultas no IWCare, consulte o manual do IWCare.  
+
+Posicione o Prontuário em um paciente de testes (normalmente os bancos nos clientes da Iberwan possuem um paciente para propósito de testes).
+Crie Tele-consulta para o Paciente de testes. As consultas serão criadas para o médico (usuário que logou no IW-Care)
 
 Em seguida acesse o calendário do Google Workspace do usuário <nome_cliente>@iwsoftware.com.br  
-No Google Workspace, aplicação de Calendário da conta <nome_cliente>iwsoftware.com.br, deverá existir uma agenda para cada médico para o qual criou-se Tele-consultas.
+Na aplicação de Calendário da conta <nome_cliente>iwsoftware.com.br, deverá existir uma agenda para cada médico para o qual criou-se Tele-consultas.
 E dentro da Agenda desses médicos, deverá existir um evento para cada Tele-consulta criada.  
 
-Esses testes são fundamentais para garantir que o IW-Telemedicina-API foi instalada corretamente está funcionando bem.e o IwCare está cnseguindo acessá-la.  
+Esses testes são fundamentais para garantir que o IW-Telemedicina-API foi instalada corretamente,  está funcionando bem e está conseguindo acessá-la.  
 
-**O IW-Telemedicine-API não pode ser considerado *Instalado* se esses testes não forem bem sucedidos.** 
+**O IW-Telemedicine-API não pode ser considerado *Instalado* se esses testes não forem bem sucedidos.**  
+Os testes realizados anteriomente (até a Etapa 3) são importantes também, pois se eles falharem os testes dessa Etapa 4 irão falhar também.
+O testes anteriores certificam que a instalação está evoluindo corretamente e que as possibilidades dos testes da Etapa 4 passarem também são muito altas.  
 
 
 Aqui termina a etapa 4 da instalação do Iw-Telemedicina-API. Que é a etapa final da instalação.  
 
-**IMPORTANTE:**  
->*Agora o diretório temporário de instalação pode ser excluído.  
-Nele estão fontes e outros arquivos protegidos por direitos autorais.*  
+8. **Configurar o parâmetro GLB_TELEMEDICINE_URL nos demais bancos de dados.
+> A telemedicina só irá funcionar nops bancos de dados que tiverem o parametro GLB_TELEMEDICINE_URL valorado corretamente. 
 
----
+> **IMPORTANTE:**  
+> *Agora o diretório temporário de instalação pode ser excluído.  
+ 
+
 **FIM.**
 
 
