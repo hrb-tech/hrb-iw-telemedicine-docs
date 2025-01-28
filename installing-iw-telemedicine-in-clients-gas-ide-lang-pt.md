@@ -40,26 +40,17 @@ Não se preocupe caso não tenha salvo essa URL BASE. O IDE do Google App Script
 **IMPORTANTE:**   
 **Todas as vezes que se instala ou atualiza o IW-Telemedicine-API, é criada uma nova URL BASE**  
 
-## 2. Criar uma propriedade de projeto chamada: *AUTHORIZED_URL* (no IDE)  
-Para tal, clicar na opção configurações (Settings) localizada do lado esquerdo do IDE.
-Rolar a tela (para baixo) até encontrar a opção: *script properties (propriedades do script)*
-Adicionar uma nova propriedade chamada: AUTHORIZED_URL e atribuir inicialmente um valor aleatório qualquer. Ex: abdefg  
-Essa propriedade será usada para validar a URL usada em todas as requisições HTTP para esta instância que acaba de ser instalada.  
-Para efeito de TESTES ela foi inicializada com valor incorreto de propósito.
-
 ## 3. Fazer TESTES de chamadas da API: (no terminal)  
-### inicialmente sem valor incorreto da URL BASE na propriedade AUTHORIZED_URL  
 
 Fazer 3 testes usando os comandos abaixo no terminal.  
   
 **IMPORTANTE:** executar esses comandos no direotiro: *<diretorio-temporario>/googleAppScript-IW-Telemedicine-API_<TAG>/api-call-tests/*   
 Cada comando de teste usa uma linguagem de programação distinta para fazer a chamada.  
-Garantem independência tecnológica dos serviços de telemedicina e também o funcionamento da proteção de aceite apenas de chamadas que usam
-a URL BASE certa da instância.
-Nesses testes o IW-Telemedicine-API rejeitará as chamadas, uma vez que a propriedade AUTHORIZED_URL foi inicialmente valorada com valor aleatório e portanto incorreto.  
+Garantem independência tecnológica dos serviços de telemedicina.  
+Nesses testes o IW-Telemedicine-API aceitará as chamadas.    
 **Esses testes são vitais para garantir que API está acessivel somente aos que sabem chamá-la de fato. E independente da tecnologia usada na chamada.**  
-A sequir os comandos que devem ser usados nesses testes.  
-
+A sequir os comandos que devem ser usados.    
+  
 **Linguagem Python 3.10:**  
 ```bash  
 python3 test-iw-telemedicine-api-call.py URL_BASE_CORRETA
@@ -69,8 +60,11 @@ python3 test-iw-telemedicine-api-call.py URL_BASE_CORRETA
 A resposta deve ser:  
 ```json  
 {
-    "responseCode": -1,
-    "errorMessage": "invalid URL used in request"
+  "responseCode": 0.0,
+  "iwResponseData": {
+    "apiName": "IW-Telemedicine-API for Google Meeting",
+    "apiVersion": "1.1.0"
+  }
 }
 ```
 
@@ -91,49 +85,6 @@ java -cp ".:gson-2.11.0.jar" testIwTelemedicineApiCall URL_BASE_CORRETA
 ```  
 >Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
 **A resposta deve ser a mesma da chamda feita em Python.**  
-
-## 4. Valorar a propŕiedade AUTHORIZED_URL do Projeto com a URL correta (usando o IDE Google)
-> agora vamos acessar a Propriedade AUTHORIZED_URL do Projeto via IDE (do mesmo modo que fizemos no momento da criação dela no passo 2).
-Agora vamos valorar corretamente a propriedade com a URL BASE Obtida no final do passo 1.
-** Importante: valorar essa propriedade com o valor exato. Trata-se de valor com muitos caracteres. Evite digitação. Use copiar e colar.**  
-  
-## 5. Executar novamente os mesmos comandos de TESTES do passo 3:  (usando o terminal)
-### Agora com o valor correto da URL BASE na propriedade AUTHORIZED_URL do Projeto  
-
-repetir os mesmos comandos usados no passo 3. Tmabém devem ser executados no diretório: *<diretorio-temporario>/googleAppScript-IW-Telemedicine-API_<TAG>/api-call-tests/*  
-
-Agora, a IW-Telemedicine-API aceitará as chamadas, uma vez que a propriedade AUTHORIZED_URL nesse momento está com o valor correto.  
-
-A sequir os comandos que devem ser usados nesse passo.  
-
-**Linguagem Python 3.10:**  
-```bash  
-python3 test-iw-telemedicine-api-call.py URL_BASE_CORRETA
-```  
->Nesse comando deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
-
-A resposta deve ser:  
-```json  
-
-```
-
----  
-
-**Linguagem Java 8:**  
-```bash
-java -cp ".:gson-2.11.0.jar" testIwTelemedicineApiCall URL_BASE_CORRETA 
-```  
->Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
-**A resposta deve ser a mesma da chamada em Python.**  
-
----  
-
-**Linguagem Golang 1.23.5:**  
-```bash  
-./testIwTelemedicineApiCall URL_BASE_CORRETA
-```  
->Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
-**A resposta deve ser a mesma da chamada em Python.**  
 
 
 Agora siga para a Etapa 4: [Etapa 4](installing-iw-telemedicine-in-clients-iwcare-config-lang-pt.md)  
