@@ -33,20 +33,20 @@ Em seguida acesse o calendário do Google Workspace do usuário <nome_cliente>@i
 Na aplicação de Calendário da conta <nome_cliente>iwsoftware.com.br, deverá existir uma agenda para cada médico para o qual criou-se Tele-consultas.
 E dentro da Agenda desses médicos, deverá existir um evento para cada Tele-consulta criada.  
 
-Esses testes são fundamentais para garantir que o IW-Telemedicina-API foi instalada corretamente,  está funcionando bem e está conseguindo acessá-la.  
+Esses testes são fundamentais para garantir que o IW-Telemedicina-API foi instalada corretamente,  está funcionando bem e está conseguindo ser acessada pelo sistema IwCare.  
 
 **O IW-Telemedicine-API não pode ser considerado *Instalado* se esses testes não forem bem sucedidos.**  
 Os testes realizados anteriomente (até a Etapa 3) são importantes também, pois se eles falharem os testes dessa Etapa 4 irão falhar também.
 O testes anteriores certificam que a instalação está evoluindo corretamente e que as possibilidades dos testes da Etapa 4 passarem também são muito altas.  
 
 
-Aqui termina a etapa 4 da instalação do Iw-Telemedicina-API. Que é a etapa final da instalação.  
+Aqui termina a *Etapa 4* da instalação do Iw-Telemedicina-API. É a última Etapa.  
 
-8. **Configurar o parâmetro GLB_TELEMEDICINE_URL nos demais bancos de dados.
-> A telemedicina só irá funcionar nops bancos de dados que tiverem o parametro GLB_TELEMEDICINE_URL valorado corretamente. 
+8. **Configurar o parâmetro GLB_TELEMEDICINE_URL nos demais bancos de dados do cliente.
+> A telemedicina só irá funcionar nos bancos de dados que tiverem o parametro GLB_TELEMEDICINE_URL valorado corretamente. 
 
 > **IMPORTANTE:**  
-> *Agora o diretório temporário de instalação pode ser excluído.  
+> *Agora o diretório temporário de instalação pode ser completamente excluído.  
  
 
 **FIM.**
