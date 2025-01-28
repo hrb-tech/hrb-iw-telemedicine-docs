@@ -87,7 +87,7 @@ java -cp ".:gson-2.11.0.jar" testIwTelemedicineApiCall URL_BASE_CORRETA
 
 **Linguagem Golang 1.21:**  
 ```bash  
-./testIwTelemecineApiCall URL_BASE_CORRETA
+./testIwTelemedicineApiCall URL_BASE_CORRETA
 ```  
 >Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
 **A resposta deve ser a mesma da chamda feita em Python.**  
@@ -130,7 +130,7 @@ java -cp ".:gson-2.11.0.jar" testIwTelemedicineApiCall URL_BASE_CORRETA
 
 **Linguagem Golang 1.23.5:**  
 ```bash  
-./testIwTelemecineApiCall URL_BASE_CORRETA
+./testIwTelemedicineApiCall URL_BASE_CORRETA
 ```  
 >Nesse comando também deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.  
 **A resposta deve ser a mesma da chamada em Python.**  
