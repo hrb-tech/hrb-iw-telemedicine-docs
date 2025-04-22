@@ -3,14 +3,14 @@
 
 
 1. **Criar usuário adicional <customer_name>@iwsoftware.com.br no Google Workspace do cliente:**  
-Usar o acesso do usuário Master para criar o usuário infra.<customer_name>@iwsoftware.com.br no Google Workspace da Iberwan.  
-O usuário <customer_name><>@iwsoftware.com.br é o usuário que será usado para instalar a IW-Telemedicina-API para o cliente específico.
+Usar o acesso do usuário Master para criar o usuário <customer_name>@iwsoftware.com.br no Google Workspace da Iberwan.  
+O usuário <customer_name>@iwsoftware.com.br é o usuário que será usado para instalar a IW-Telemedicina-API para o cliente específico.
 (Substituir <customer_name> pelo nome da empresa cliente).    
 
 É impressindível a criação desse usuário. Ele é o *pivot* para todas as integrações IW-Telemedicine-API com o sistema IW-Care em um cliente.  
 **Sem a existência desse usuário não é possível instalar a IW-Telemedicina-API.** para um cliente.  
 
-Ao criar o usuário infra.<customer_name>@iwsoftware.com.br, deve-se definir uma senha para ele.  
+Ao criar o usuário infra. <customer_name>@iwsoftware.com.br, deve-se definir uma senha para ele.  
 A senha deve ser forte e segura.  
 Esse usuário deve ter acesso a todos os recursos do Google Workspace da Iberwan.  
 (principalmente Gmail, Calendar, Drive, Meet, Sheets, Docs)
@@ -47,7 +47,7 @@ Não há necessidade de uma máquina muito poderosa, desde que consiga rodar o W
 >Todos os comandos da etapa 2 de instalação do IW-Telemedicina-API podem ser executados em um terminal do WLS2.
 Usar o WLS2 é a nossa recomendação para quem só pode usar máquina Windows.
 >Existem outras formas de usar Linux dentro de máquinas windows, mas o WLS2 é a mais simples e tem a vantagem de ter um terminal do Linux dentro do Windows.
->O WLS2 é uma tecnogia que a Microsoft vem desenvolvendo a mais de uma década e hoje se encontra em sua versão 2 e com boa maturidade.
+>O WLS2 é uma tecnologia que a Microsoft vem desenvolvendo a mais de uma década e hoje se encontra em sua versão 2 e com boa maturidade.
 >Está disponivel para todas as máquinas com Windows 10/11.   
   
 **IMPORTANTE:**  

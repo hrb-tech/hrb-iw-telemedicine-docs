@@ -1,16 +1,18 @@
 # Procedimento de instalação do IW-TELEMEDICINE-API  
 ## Novo Modelo de Negócio - Iberwan centric.
 
-Agora a IW-Telemedicine API, passa a usar um novo modelo de negócio onde a Iberwan passa a ser em parceria com  Google os provedores de todos os recursos.
+IW-Telemedicine-API, passa a usar um novo modelo de negócio onde a Iberwan passa a ser em parceria com  Google os provedores de todos os recursos.
 
 > Instalação do IW-TELEMEDICINE-API para todos o clientes deve ser executa pela Iberwan **(Todas as 4 Etapas)**  
 O profissional da Iberwan responsável por instalar o IW-TELEMEDICINE-API deve ter conhecimento  
 de tudo o que é feito no Google Workspace durante a instalação como também os princípios básicos de funcionamento do IW-TELEMEDICINE-API.  
-Precisa também assinar um termo de Sigilo e de não alteração do código em produção com a Iberwan. (todos os colaboradores da Iberwan já devem ter assinado esse termo)  
-Pois precisa ter acesso aos fontes.
+Precisa também assinar um termo de Sigilo e de não alteração do código em produção com a Iberwan. (via de regra todos os colaboradores da Iberwan já devem ter assinado esse termo)  
+Terá acesso aos fontes.
 
 Os recursos do IW-Telemedicine-API em si e as funcionalidades do Google Work Spaces quando usados para fins Medicos  
 possuem uma série de implicações legais e de segurança que devem ser entendidas e cumpridas (ex: HIPPA, LGPD).
+A iberwan deve assinar BASIC assurance e ser certificado pela Google como um provedor de serviços de software para a saúde
+Essa assinatura deve ser feita no Google Workspace e deve ser feita pela Iberwan usando usuário master do Google Workspace.
 
 1. Pre-Instalação: Prepara a instalação do *projeto IW-TELEMEDICINE-API* no Google Workspaces da Iberwan:  
    [Detalhes aqui](installing-iw-telemedicine-in-clients-pre-install-lang-pt.md)
