@@ -37,7 +37,7 @@ Esses testes são fundamentais para garantir que o IW-Telemedicina-API foi insta
 
 **O IW-Telemedicine-API não pode ser considerado *Instalado* se esses testes não forem bem sucedidos.**  
 Os testes realizados anteriomente (até a Etapa 3) são importantes também, pois se eles falharem os testes dessa Etapa 4 irão falhar também.
-O testes anteriores certificam que a instalação está evoluindo corretamente e que as possibilidades dos testes da Etapa 4 passarem também são muito altas.  
+O testes anteriores certificam que a instalação está evoluindo corretamente e que as os testes da Etapa 4 teem alta probalidade passarem também.  
 
 
 Aqui termina a *Etapa 4* da instalação do Iw-Telemedicina-API. É a última Etapa.  
@@ -46,7 +46,7 @@ Aqui termina a *Etapa 4* da instalação do Iw-Telemedicina-API. É a última Et
 > A telemedicina só irá funcionar nos bancos de dados que tiverem o parametro GLB_TELEMEDICINE_URL valorado corretamente. 
 
 > **IMPORTANTE:**  
-> *Agora o diretório temporário de instalação pode ser completamente excluído.  
+> *Agora o diretório temporário de instalação pode ser completamente excluído. Mas fica a critério do profissional que está fazendo a instalação. Ele pode querer manter o diretório temporário documentar a ultima instação realizada. Ou mesmo manter varios diretorios desses como histórico de instalações.*
  
 
 **FIM.**

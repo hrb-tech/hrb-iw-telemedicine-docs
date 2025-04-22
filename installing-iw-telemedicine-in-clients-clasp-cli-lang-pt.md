@@ -27,9 +27,9 @@ git clone git@github.com:hrbsystems/googleAppScript-IW-Telemedicine-API.git
 ```  
 > *Obs:  
 Este commando clone acima só irá funcionar se a sua máquina tiver o git instalado e a chave pública ssh do seu usuário estiver cadastrada no github pelo suporte da Iberwan.    
-(Essa chave publica é criada na etapa 1 (pre-instalação).  
+Essa chave publica é criada na etapa 1 (pre-instalação).  
 Informação de como gerar a chave publica está presente na Etapa 1.  
-Se vc chegou até aqui é porque vc já deve ter cumprido essas exigências. Caso não, interrompa o processo de instalação nesse ponto e continue quando pronto.*
+Se vc chegou até aqui é porque cumpriu as exigências. Caso não, interrompa o processo de instalação nesse ponto e continue quando pronto.*
   
 4. **Usar os comandos linux a seguir :**  
 ```bash  
@@ -50,17 +50,17 @@ cd googleAppScript-IW-Telemedicine-API_${TAG}
 ```
 
 Esta sequencia deve ser execurada uma linha de cada vez. Elas farão:  
-* Posicionamento do diretorio do projeto clonado como diretorio corrente.  
+* Posicionamento do diretório do projeto clonado como diretorio corrente.  
 * Obtenção da Tag mais recente do branch corrente (branch main)
 * posiciona no diretorio pai
 * troca o nome do diretrio do projeto clonado, incluindo no nome do mesmo a tag como sufixo (adequação ao padrao da Iberwan de instalação)
 * reposiciona no diretorio filho (diretório do projeto clonado).  
 O nome final do diretório clonado ficaria: googleAppScript-IW-Telemedicine_API_v1.2.3 (assumindo que a ultima tag é v1.2.3)
 
-IMPORTANTE: todos os passos do procedimento possuem uma razão de ser e em especial, essa sequencia de comandos acima.  
-Tem haver com nossos padrões de instalação.  
-Todas as versões do IW-Telemedicine_API devem obrigatoriamente serem instaladas com um sufixo que identifique precisamente a versão da mesma.
-Sem isso, devemos reiniciar do zero tudo. Faz parte da boa documentação da instalação. Embora possa parecer radical iniciar do zero, a execução de
+IMPORTANTE: todos os passos do procedimento possuem uma razão de ser e em especial, essa última sequencia de comandos acima.  
+Integram nossos padrões de instalação.  
+Todas as versões do IW-Telemedicine_API devem obrigatoriamente serem instaladas com um sufixo que identifique "precisamente" a versão da mesma.
+Sem isso, devemos reiniciar do zero. Faz parte da boa documentação da instalação. Embora possa parecer radical iniciar do zero, a execução de
 tudo que antecede é rápida.  
   
 
@@ -69,7 +69,9 @@ tudo que antecede é rápida.
    ./_prepare-basic-ubuntu-env.sh
    ```
    Esse comando irá instalar uma serie de pacotes do Ubuntu 22.04 necessários à instalação da Iw-Telemedicine-API.
-   Sem eles a instalação não pode prosseguir. Caso contrário, muitos dos comando subsequentes irão falhar.  
+   Sem eles a instalação não pode prosseguir. Caso contrário, muitos dos comando subsequentes irão falhar.
+   IMPORTANTE: Esse script apresentou erros em WSL Ubuntu 22.04. Assim devemos executar os comandos de instalações presentes no mesmo para garantir que ambiente de instalação esteja funcionando corretamente.
+
    
 5. **use o programa *clasp* (instalado no passo anterior) para fazer login no Google Workspace usando as credenciais do usuário criado com a finalidade de instalar o IW-Telemedicine-API.**  
 ```bash

@@ -2,7 +2,6 @@
 ## Instalação IW-Telemedicina-API
   
 Executada no início usando o IDE do Google para App Scripts que funciona direto do Navegador (Google Chrome de preferência)  
-*Esses passos devem ser executados pelo cliente, com suporte de um consultor da Iberwan se o cliente assim o desejar.*
   
 >Essensialmente, os passos abaixo irão realizar todas as autorizações de execução dos scripts como se fossem dispadodos pelo usuário da respectiva conta (<nome_cliente@iwsoftware.com.br>),
 permitindo que os scripts do projeto carregados na etapa anterior sejam acessados na internet e também tenham acesso aos recursos necessários do Google Workspace.  
@@ -27,7 +26,7 @@ Na sequencia aparecerá a tela abaixo:
 Clique no botão azul *Autorizar Acesso*.
 Agora, uma série de telas associadas ao processo de autorização irão se suceder.
 Não vamos mostrar aqui todas essas telas de autorização porque a aparência delas muda com frequência.
-O Google está sempre mexendo nessas telas. Segurança é uma questão levada muito a sério.  
+O Google está sempre alterando elas. Segurança é uma questão levada muito a sério.  
 **O importante é autorizar tudo o que for perguntado.**  
 
 Ao final da implantação, aparecerá a tela abaixo:  
@@ -57,7 +56,7 @@ python3 test-iw-telemedicine-api-call.py URL_BASE_CORRETA
 ```  
 >Nesse comando deve-se substituir *URL_BASE_CORRETA* da instalação, salva no final do passo 1.
 
-A resposta deve ser:  
+A resposta deve o padrão abaixo:  
 ```json  
 {
   "responseCode": 0.0,
@@ -67,6 +66,8 @@ A resposta deve ser:
   }
 }
 ```
+Prestar atenção ao valor do campo *apiVersion* na resposta.
+Se o valor for diferente da versão que estamos instalando significa que a API não está funcionando corretamente.
 
 ---  
 
